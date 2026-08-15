@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Liên hệ F8</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <link rel="stylesheet" href="../assets/css/contact.css" />
+    </head>
+    <body>
+        <div class="contact-container">
+            <header class="contact-header">
+                <h1 class="contact-title">Liên hệ</h1>
+                <p class="contact-desc">!
+                    F8 luôn lắng nghe và tiếp nhận mọi ý kiến đóng góp của bạn.
+                    Hãy liên hệ với chúng mình bằng cách điền thông tin vào form
+                    dưới đây. Chúng mình sẽ phản hồi bạn trong thời gian sớm
+                    nhất.
+                </p>
+            </header>
+
+            <main class="contact-content">
+                <div class="contact-left">
+                    <div class="contact-info">
+                        <p>
+                            &#x1F3E1; Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy, Hà
+                            Nội
+                        </p>
+                        <p>&#x2706; <a href="tel:0819198989">08 1919 8989</a></p>
+                        <p>&#9993; <a href="mailto:contact@f8.edu.vn">contact@f8.edu.vn</a></p>
+                    </div>
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="fullname">Họ và tên</label>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Nhập tên đầy đủ..."
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Nhập email..."
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Điện thoại</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Nhập số điện thoại..."
+                                required
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Nội dung</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="4"
+                                placeholder="Nhập nội dung liên hệ..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="submit-btn">
+                                Gửi đi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-right">
+                    <div class="map-wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.499459902349!2d105.8025744!3d21.012692299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4df3c6c329%3A0xd8e14fe61fd32604!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIEdJw4FPIEThu6RDIEY4!5e0!3m2!1svi!2s!4v1785786648455!5m2!1svi!2s"
+                            width="600"
+                            height="450"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                        ></iframe>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

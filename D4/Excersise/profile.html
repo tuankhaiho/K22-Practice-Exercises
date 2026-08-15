@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang cá nhân</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="../assets/css/reset.css"/>
+        <link rel="stylesheet" href="../assets/css/blog.css" />
+        <link rel="stylesheet" href="../assets/css/profile.css">
+        
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="navbar-left">
+                <a href="https://f8.edu.vn/" class="logo-link">
+                    <img
+                        src="../assets/image/F8.png"
+                        alt="LOGO"
+                        class="f8-logo"
+                    />
+                    <span class="logo-text">HỌC LẬP TRÌNH ĐỂ ĐI LÀM</span>
+                </a>
+            </div>
+
+            <div class="navbar-center">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input
+                        type="text"
+                        placeholder="Tìm khóa học, bài tập, hỏi đáp..."
+                    />
+                </div>
+            </div>
+
+            <div class="navbar-right">
+                <a href="#" class="nav-item">Khóa học của tôi</a>
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="nav-profile">
+                    <img
+                        src="../assets/image/avatar-author.png"
+                        alt="Avtar Profile"
+                        class="avatar"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <aside class="profile-sidebar">
+                <div class="avatar-wrapper">
+                    <img
+                        src="../assets/image/avatar-author.png"
+                        alt="Hồ Tuấn Khải"
+                        class="avatar-img"
+                    />
+                </div>
+                <h1 class="profile-name">Hồ Tuấn Khải</h1>
+                <p class="profile-username">@tuankhaiho</p>
+
+                <ul class="profile-stats">
+                    <li>
+                        <i class="fa-solid fa-user-group"></i>
+                        <span
+                            ><strong>0</strong> người theo dõi ·
+                            <strong>0</strong> đang theo dõi</span
+                        >
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-stopwatch"></i>
+                        <span
+                            ><strong>1</strong> ngày học liên tiếp · Dài nhất:
+                            <strong>7</strong> ngày</span
+                        >
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-user"></i>
+                        <span>Tham gia F8 từ 2 năm trước</span>
+                    </li>
+                </ul>
+            </aside>
+
+            <main class="profile-content">
+                <div class="tabs">
+                    <div class="tab active">Khóa học đã đăng ký (7)</div>
+                    <div class="tab">Bài viết đã đăng (0)</div>
+                </div>
+
+                <div class="course-list">
+                    <div class="course-card">
+                        <div class="course-thumb">
+                            <img src="../assets/image/Sass.png" alt="" />
+                        </div>
+                        <div class="course-info">
+                            <h2 class="course-title">Ngôn ngữ Sass</h2>
+                            <div class="course-price">
+                                <span class="old-price">400.000đ</span>
+                                <span class="new-price">299.000đ</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span class="no-rating">Chưa có đánh giá</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img
+                                        src="../assets/image/avatar-sondang.png"
+                                        alt="Sơn Đặng"
+                                    />
+                                    <span>Sơn Đặng</span>
+                                </div>
+                                <div class="meta-stats">
+                                    <span
+                                        ><i class="fa-solid fa-circle-play"></i>
+                                        27</span
+                                    >
+                                    <span
+                                        ><i class="fa-solid fa-clock"></i>
+                                        6h18p</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumb">
+                            <img src="../assets/image/fullstack.png" alt="" />
+                        </div>
+                        <div class="course-info">
+                            <h2 class="course-title">Fullstack Web</h2>
+                            <div class="course-price">
+                                <span class="new-price">Liên hệ</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i>
+                                <span class="no-rating">Chưa có đánh giá</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img
+                                        src="../assets/image/avatar-sondang.png"
+                                        alt="Sơn Đặng"
+                                    />
+                                    <span>Sơn Đặng</span>
+                                </div>
+                                <div class="meta-stats">
+                                    <span
+                                        ><i class="fa-solid fa-circle-play"></i>
+                                        499</span
+                                    >
+                                    <span
+                                        ><i class="fa-solid fa-clock"></i>
+                                        398h15p</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumb">
+                            <img src="../assets/image/jspro.png" alt="" />
+                        </div>
+                        <div class="course-info">
+                            <h2 class="course-title">JavaScript Pro</h2>
+                            <div class="course-price">
+                                <span class="old-price">3.299.000đ</span>
+                                <span class="new-price">1.399.000đ</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i>
+                                <span class="no-rating">Chưa có đánh giá</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img
+                                        src="../assets/image/avatar-sondang.png"
+                                        alt="Sơn Đặng"
+                                    />
+                                    <span>Sơn Đặng</span>
+                                </div>
+                                <div class="meta-stats">
+                                    <span
+                                        ><i class="fa-solid fa-circle-play"></i>
+                                        302</span
+                                    >
+                                    <span
+                                        ><i class="fa-solid fa-clock"></i>
+                                        56h52p</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumb">
+                            <img src="../assets/image/html-css.png" alt="" />
+                        </div>
+                        <div class="course-info">
+                            <h2 class="course-title">HTML CSS Pro</h2>
+                            <div class="course-price">
+                                <span class="old-price">2.500.000đ</span>
+                                <span class="new-price">1.299.000đ</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i>
+                                <span class="no-rating">Chưa có đánh giá</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <img
+                                        src="../assets/image/avatar-sondang.png"
+                                        alt="Sơn Đặng"
+                                    />
+                                    <span>Sơn Đặng</span>
+                                </div>
+                                <div class="meta-stats">
+                                    <span
+                                        ><i class="fa-solid fa-circle-play"></i>
+                                        590</span
+                                    >
+                                    <span
+                                        ><i class="fa-solid fa-clock"></i>
+                                        116h50p</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumb">
+                            <img src="../assets/image/reactjs.png" alt="" />
+                        </div>
+                        <div class="course-info">
+                            <h2 class="course-title">
+                                Xây Dựng Website với ReactJS
+                            </h2>
+                            <div class="course-price">
+                                <span class="new-price">Miễn phí</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i>
+                                <span class="no-rating">Chưa có đánh giá</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <span
+                                        ><i class="fa-solid fa-users"></i>
+                                        81.347</span
+                                    >
+                                </div>
+                                <div class="meta-stats">
+                                    <span
+                                        ><i class="fa-solid fa-circle-play"></i>
+                                        112</span
+                                    >
+                                    <span
+                                        ><i class="fa-solid fa-clock"></i>
+                                        27h32p</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumb">
+                            <img
+                                src="../assets/image/html-css-basic.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="course-info">
+                            <h2 class="course-title">
+                                HTML CSS từ Zero đến Hero
+                            </h2>
+                            <div class="course-price">
+                                <span class="new-price">Miễn phí</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i>
+                                <span class="no-rating">Chưa có đánh giá</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <span
+                                        ><i class="fa-solid fa-users"></i>
+                                        220.420</span
+                                    >
+                                </div>
+                                <div class="meta-stats">
+                                    <span
+                                        ><i class="fa-solid fa-circle-play"></i>
+                                        117</span
+                                    >
+                                    <span
+                                        ><i class="fa-solid fa-clock"></i>
+                                        29h5p</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-thumb">
+                            <img src="../assets/image/c++.png" alt="" />
+                        </div>
+                        <div class="course-info">
+                            <h2 class="course-title">
+                                Lập trình C++ cơ bản, nâng cao
+                            </h2>
+                            <div class="course-price">
+                                <span class="new-price">Miễn phí</span>
+                            </div>
+                            <div class="course-rating">
+                                <i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i
+                                ><i class="fa-regular fa-star"></i>
+                                <span class="no-rating">Chưa có đánh giá</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="instructor">
+                                    <span
+                                        ><i class="fa-solid fa-users"></i>
+                                        40.286</span
+                                    >
+                                </div>
+                                <div class="meta-stats">
+                                    <span
+                                        ><i class="fa-solid fa-circle-play"></i>
+                                        55</span
+                                    >
+                                    <span
+                                        ><i class="fa-solid fa-clock"></i>
+                                        10h18p</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 F8 Blog - Học lập trình để đi làm.</p>
+        </footer>
+    </body>
+</html>

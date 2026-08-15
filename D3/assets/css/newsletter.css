@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:"Inter", sans-serif;
+    background-color: #f2f3f5;
+    color: #292929;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.description {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.feed-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    padding: 24px;
+    margin: 20px 0;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: #292929;
+}
+
+.post-time {
+    font-size: 13px;
+    color: #757575;
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.post-text {
+    font-size: 15px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.post-text p {
+    margin-bottom: 12px;
+}
+
+.post-text ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+}
+
+.post-text li {
+    margin-bottom: 6px;
+}
+
+.post-link {
+    color: #f05123;
+    text-decoration: underline;
+}
+
+.post-tags {
+    color: #757575;
+    margin-bottom: 12px;
+}
+
+.post-banner {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 16px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+
+.chat-banner {
+    max-width: 350px;
+}
+
+.action-button {
+    display: block;
+    width: 100%;
+    background-color: #f05123;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.action-button:hover {
+    background-color: #d84518;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    background-color: #292929;
+    padding: 20px 0;
+}
