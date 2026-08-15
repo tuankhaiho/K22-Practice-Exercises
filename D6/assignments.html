@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài tập của tôi</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="../D5/assets/images/logo-f8.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
+        <link rel="stylesheet" href="../D5/assets/css/reset.css" />
+        <link rel="stylesheet" href="../D5/assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <header class="navbar">
+            <nav class="navbar-left">
+                <a href="../D6/index.html" class="logo-link">
+                    <img
+                        src="../D5/assets/images/logo-f8.png"
+                        alt="LOGO"
+                        class="logo"
+                    />
+                    <h1 class="slogan">HỌC LẬP TRÌNH ĐỂ ĐI LÀM</h1>
+                </a>
+            </nav>
+
+            <div class="navbar-center">
+                <search class="search-box">
+                    <div class="categories">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <span>Danh mục</span>
+                    </div>
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input
+                            type="text"
+                            placeholder="Tìm khóa học, bài tập, hỏi đáp..."
+                        />
+                    </div>
+                </search>
+            </div>
+
+            <nav class="navbar-right">
+                <a href="../D4/Excersise/profile.html" class="nav-item"
+                    >Khóa học của tôi</a
+                >
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="badge">6</span>
+                </div>
+                <div class="nav-profile">
+                    <img
+                        src="../D5/assets/images/avatar-profile.png"
+                        alt="Avatar Profile"
+                        class="avatar"
+                    />
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <aside class="menu">
+                <nav class="sidebar">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="./index.html"
+                                ><i class="fa-solid fa-house"></i
+                                ><span>Trang chủ</span></a
+                            >
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://f8.edu.vn/roadmap"
+                                ><i class="fa-solid fa-road"></i
+                                ><span>Lộ trình</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://f8.edu.vn/blog"
+                                ><i class="fa-etch fa-solid fa-newspaper"></i
+                                ><span>Bài viết</span></a
+                            >
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://f8.edu.vn/new-feeds"
+                                ><i class="fa-solid fa-bullhorn"></i
+                                ><span>Bản tin</span></a
+                            >
+                        </li>
+                        <li class="menu-item">
+                            <a href="./discussions.html"
+                                ><i class="fa-solid fa-comments"></i
+                                ><span>Hỏi đáp</span></a
+                            >
+                        </li>
+                        <li class="menu-item active">
+                            <a href="#!"
+                                ><i class="fa-solid fa-clipboard-list"></i
+                                ><span>Bài tập</span></a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="page-content">
+                    <div class="page-header">
+                        <h1 class="page-title">Bài tập của tôi</h1>
+                        <p class="page-desc">
+                            Theo dõi tiến độ bài tập từ các lớp đã đăng ký.
+                        </p>
+                    </div>
+
+                    <div class="breadcrumb">
+                        <span>Bài tập</span> <span class="separator">/</span>
+                        <span class="active">Tất cả</span>
+                    </div>
+
+                    <div class="filter-bar">
+                        <div class="search-input-wrapper assignment-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input
+                                type="text"
+                                placeholder="Tìm theo tên bài tập..."
+                            />
+                        </div>
+                    </div>
+
+                    <div class="assignments-tabs">
+                        <div class="tab-item active">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                            <span>Tất cả (5)</span>
+                        </div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Cần nộp (1)</span>
+                        </div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Đang chấm (1)</span>
+                        </div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Đã chấm điểm (3)</span>
+                        </div>
+                    </div>
+
+                    <div class="assignments-loading">
+                        <div class="spinner"></div>
+                        <p>Đang tải bài tập...</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-col col-info">
+                    <div class="footer-logo">
+                        <img
+                            src="../D5/assets/images/logo-f8.png"
+                            alt="F8 Logo"
+                        />
+                        <h3>HỌC LẬP TRÌNH ĐỂ ĐI LÀM</h3>
+                    </div>
+                    <p>Điện thoại: <a href="tel:0819198989">0819198989</a></p>
+                    <p>
+                        Email:
+                        <a href="mailto:contact@f8.edu.vn">contact@f8.edu.vn</a>
+                    </p>
+                    <p>
+                        Địa chỉ liên hệ: Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy,
+                        Hà Nội
+                    </p>
+                    <div class="footer-badges">
+                        <a
+                            href="https://www.dmca.com/Protection/Status.aspx?id=1b325c69-aeb7-4e32-8784-a0009613323a&refurl=https%3a%2f%2ff8.edu.vn%2f&rlo=true"
+                            ><img
+                                src="../D5/assets/images/DMCA.png"
+                                alt="DMCA PROTECTED"
+                                class="badge-dmca"
+                        /></a>
+                        <a href="http://online.gov.vn/Home/WebDetails/138269"
+                            ><img
+                                src="../D5/assets/images/bo-cong-thuong.png"
+                                alt="Đã thông báo bộ công thương"
+                                class="badge-bct"
+                        /></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>VỀ F8</h3>
+                    <ul>
+                        <li>
+                            <a href="https://f8.edu.vn/about-us">Giới thiệu</a>
+                        </li>
+                        <li><a href="https://f8.edu.vn/contact">Liên hệ</a></li>
+                        <li>
+                            <a href="https://f8.edu.vn/policies"
+                                >Điều khoản & Quy định</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/information-security-policy"
+                                >Chính sách bảo mật</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>HỖ TRỢ</h3>
+                    <ul>
+                        <li>
+                            <a href="https://f8.edu.vn/payment-policy"
+                                >Chính sách thanh toán</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://f8.edu.vn/shipping-policy"
+                                >Chính sách vận chuyển</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://f8.edu.vn/inspection-policy"
+                                >Chính sách kiểm hàng</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://f8.edu.vn/pricing-information"
+                                >Quy định về giá</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>CÔNG CỤ</h3>
+                    <ul>
+                        <li>
+                            <a href="https://cv.f8.edu.vn/">Tạo CV xin việc</a>
+                        </li>
+                        <li>
+                            <a href="https://f8.edu.vn/links"
+                                >Rút gọn liên kết</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://clippy.f8.edu.vn/"
+                                >Clip-path maker</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://snippet-generator.f8.edu.vn/"
+                                >Snippet generator</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://grid.f8.edu.vn/"
+                                >CSS Grid generator</a
+                            >
+                        </li>
+                        <li>
+                            <a href="https://botayra.f8.edu.vn/"
+                                >Cảnh báo sờ tay lên mặt</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col col-company">
+                    <h3>CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8</h3>
+                    <p>
+                        Địa chỉ: Tầng 4, Tòa nhà Anh Minh, số 36 Hoàng Cầu,
+                        Thành phố Hà Nội
+                    </p>
+                    <p>
+                        Mã số doanh nghiệp: 0109922901 do Chi cục Thuế Quận Đống
+                        Đa, Cục Thuế TP. Hà Nội cấp ngày 04/03/2022
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2018 - 2026 F8. Nền tảng học lập trình hàng đầu Việt Nam
+                </p>
+                <div class="social-icons">
+                    <a
+                        href="https://www.youtube.com/@f8vnofficial"
+                        class="social-youtube"
+                        ><i class="fa-brands fa-youtube"></i
+                    ></a>
+                    <a
+                        href="https://www.facebook.com/f8vnofficial"
+                        class="social-facebook"
+                        ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                    <a
+                        href="https://www.tiktok.com/@f8hoclaptrinh"
+                        class="social-tiktok"
+                        ><i class="fa-brands fa-tiktok"></i
+                    ></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
