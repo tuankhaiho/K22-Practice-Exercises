@@ -1,0 +1,3441 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>F8 - HỌC LẬP TRÌNH ĐỂ ĐI LÀM</title>
+        <link rel="icon" type="image/png" href="./assets/images/logo-f8.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary-text": "#292929",
+                            "border-color": "#e8ebed",
+                            primary: "#f05123",
+                            "text-color": "#333",
+                            "gray-color": "#757575",
+                            "bg-secondary": "#f7f7f7",
+                            "footer-bg": "#181821",
+                            "footer-border": "#282834",
+                            "green-color": "#08f850",
+                            "border-blue": "#2e89ff",
+                            "google-blue": "#4285f4",
+                            "footer-text": "#a9b3bb",
+                            "border-focus": "#ccc",
+                            "menu-hover": "#d9d7d7",
+                            "google-red": "#ea4335",
+                            "badge-color": "#f33a58",
+                            "yellow-color": "#fbbc04",
+                            "youtube-red": "#ff0000",
+                        },
+                        fontFamily: {
+                            sans: ['"Be Vietnam Pro"', "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="text-text-color font-sans">
+        <!-- Header -->
+        <header
+            class="border-border-color bg-white flex h-16 items-center gap-4 border-b px-7 sticky top-0 z-50"
+        >
+            <!-- Navbar left -->
+            <nav>
+                <a href="#" class="flex items-center justify-center gap-4">
+                    <img
+                        src="./assets/images/logo-f8.png"
+                        alt="Logo F8"
+                        class="h-9 w-9 rounded-md"
+                    />
+                    <h1 class="text-primary-text text-sm font-bold">
+                        HỌC LẬP TRÌNH ĐỂ ĐI LÀM
+                    </h1>
+                </a>
+            </nav>
+
+            <!-- Navbar center -->
+            <div class="flex items-center justify-center flex-1">
+                <search
+                    class="flex items-center border-2 border-border-color rounded-full h-10 max-w-[560px] w-full px-0.5 py-4 transition-colors duration-200 focus-within:border-border-focus gap-3"
+                >
+                    <div
+                        class="flex justify-center items-center gap-1.5 text-primary bg-[rgba(240,81,35,0.08)] rounded-full px-3 h-8"
+                    >
+                        <i class="fa-solid fa-table-cells-large"></i>
+                        <span class="text-sm font-semibold">Danh mục</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2.5 text-gray-color flex-1"
+                    >
+                        <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                        <input
+                            type="text"
+                            placeholder="Tìm Courses, bài tập, hỏi đáp..."
+                            class="outline-none bg-transparent text-sm w-full text-text-color placeholder-placeholder"
+                        />
+                    </div>
+                </search>
+            </div>
+
+            <!-- Navbar right -->
+            <nav class="flex items-center gap-6">
+                <a
+                    href="../D4/Excersise/profile.html"
+                    class="text-sm font-bold text-text-color"
+                    >Khóa học của tôi</a
+                >
+                <div class="relative cursor-pointer text-gray-color">
+                    <i class="fa-solid fa-bell"></i>
+                    <span
+                        class="absolute -top-1.5 -right-1.5 bg-badge-color text-xs text-white font-bold w-4 h-4 flex items-center justify-center rounded-full"
+                        >6</span
+                    >
+                </div>
+                <div
+                    class="flex items-center justify-center cursor-pointer size-9 rounded-full"
+                    style="
+                        background: conic-gradient(
+                            #ea4335 0deg 45deg,
+                            #4285f4 45deg 135deg,
+                            #08f850 135deg 225deg,
+                            #fbbc04 225deg 315deg,
+                            #ea4335 315deg 360deg
+                        );
+                    "
+                >
+                    <img
+                        src="./assets/images/avatar-profile.png"
+                        alt="Avatar Profile"
+                        class="size-8 rounded-full object-cover border border-white"
+                    />
+                </div>
+            </nav>
+        </header>
+
+        <!-- Container -->
+        <div class="flex mt-5">
+            <!-- Side-bar -->
+            <aside class="shrink-0 sticky top-20 h-[calc(100vh-84px)]">
+                <nav class="mx-4">
+                    <ul class="grid grid-cols-1 gap-2 p-0 m-0">
+                        <li>
+                            <a
+                                href="#"
+                                class="grid grid-rows-2 justify-items-center content-center text-text-color py-3 px-1 rounded-2xl gap-1.5 transition-colors duration-300 hover:bg-menu-hover"
+                                ><i class="fa-solid fa-house text-2xl"></i>
+                                <span class="text-sm">Trang chủ</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/roadmap"
+                                class="grid grid-rows-2 justify-items-center content-center text-text-color py-3 px-1 rounded-2xl gap-1.5 transition-colors duration-300 hover:bg-menu-hover"
+                                ><i class="fa-solid fa-road text-2xl"></i>
+                                <span class="text-sm">Lộ trình</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/blog"
+                                class="grid grid-rows-2 justify-items-center content-center text-text-color py-3 px-1 rounded-2xl gap-1.5 transition-colors duration-300 hover:bg-menu-hover"
+                                ><i class="fa-solid fa-newspaper text-2xl"></i>
+                                <span class="text-sm">Bài viết</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/new-feeds"
+                                class="grid grid-rows-2 justify-items-center content-center text-text-color py-3 px-1 rounded-2xl gap-1.5 transition-colors duration-300 hover:bg-menu-hover"
+                                ><i class="fa-solid fa-bullhorn text-2xl"></i>
+                                <span class="text-sm">Bản tin</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/discussions"
+                                class="grid grid-rows-2 justify-items-center content-center text-text-color py-3 px-1 rounded-2xl gap-1.5 transition-colors duration-300 hover:bg-menu-hover"
+                                ><i class="fa-solid fa-comments text-2xl"></i>
+                                <span class="text-sm">Hỏi đáp</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/assignment-classes"
+                                class="grid grid-rows-2 justify-items-center content-center text-text-color py-3 px-1 rounded-2xl gap-1.5 transition-colors duration-300 hover:bg-menu-hover"
+                                ><i
+                                    class="fa-solid fa-clipboard-list text-2xl"
+                                ></i>
+                                <span class="text-sm">Bài tập</span></a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="flex-grow ml-5 mr-9">
+                <!-- Learning process -->
+                <section
+                    class="flex items-center justify-between border border-border-color rounded-2xl px-6 py-4 transition-shadow duration-200 hover:shadow-md group"
+                >
+                    <div class="flex items-center gap-5">
+                        <span class="text-primary font-bold">3%</span>
+                        <div class="w-0.5 h-6 bg-border-color"></div>
+                        <div class="grid grid-cols-1 gap-1">
+                            <h2 class="text-base font-bold text-primary-text">
+                                Fullstack Web
+                            </h2>
+                            <p class="text-sm text-gray-color m-0">
+                                Bài tiếp: 6.10 Sử dụng Git, Github và cách nộp
+                                bài
+                                <span
+                                    class="opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                                    >·
+                                    <a href="#" class="text-green-400"
+                                        >Nghỉ giữ chuỗi</a
+                                    ></span
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <a
+                            href="#"
+                            class="bg-primary text-white no-underline py-2.5 px-5 rounded-3xl font-semibold text-sm transition-opacity duration-200 hover:opacity-90"
+                            >Tiếp tục học</a
+                        >
+                    </div>
+                </section>
+
+                <!-- Stories -->
+                <section class="mt-6 ml-12">
+                    <h2 class="text-base font-bold my-3">Tin</h2>
+                    <div class="flex gap-2">
+                        <a
+                            href="https://f8.edu.vn/stories/create"
+                            class="relative max-w-32 w-full flex flex-col items-center gap-2 shrink-0 cursor-pointer group"
+                        >
+                            <img
+                                class="w-full h-52 rounded-xl shadow-sm object-cover block transition-transform duration-300 group-hover:scale-105"
+                                src="./assets/images/avatar-profile.png"
+                                alt="Tạo tin"
+                            />
+                            <div
+                                class="absolute bottom-12 left-1/2 -translate-x-1/2 w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-base"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <p
+                                class="text-primary-text font-semibold text-sm text-center flex items-center justify-center gap-1"
+                            >
+                                Tạo tin
+                            </p>
+                        </a>
+
+                        <a
+                            href="https://f8.edu.vn/stories/223dd6e3-64bd-4b7e-8aa9-5e99ec73df85"
+                            class="relative max-w-[120px] w-full flex flex-col items-center gap-2 shrink-0 cursor-pointer group"
+                        >
+                            <img
+                                class="w-full h-52 rounded-xl shadow-sm object-cover block transition-transform duration-300 group-hover:scale-105"
+                                src="./assets/images/story-ngatran.jpg"
+                                alt="Story Nga Trần"
+                            />
+                            <div
+                                class="absolute top-[10px] left-2.5 w-9 h-9 rounded-full border-spacing-0.5 border-border-blue overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/avatar-ngatran.jpg"
+                                    alt="Avatar Nga Trần"
+                                    class="w-full h-full"
+                                />
+                            </div>
+                            <p
+                                class="text-primary-text font-semibold text-sm text-center flex items-center justify-center gap-1 w-full"
+                            >
+                                Nga Trần...
+                                <i
+                                    class="fa-solid fa-circle-check text-border-blue text-xs"
+                                ></i>
+                            </p>
+                        </a>
+
+                        <a
+                            href="https://f8.edu.vn/stories/3de8b626-2c23-4b50-b2d7-bd044af14184"
+                            class="relative max-w-[120px] w-full flex flex-col items-center gap-2 shrink-0 cursor-pointer group"
+                        >
+                            <img
+                                class="w-full h-52 rounded-xl shadow-sm object-cover block transition-transform duration-300 group-hover:scale-105"
+                                src="./assets/images/story-myanh.jpg"
+                                alt="Story Mỹ Anh"
+                            />
+                            <div
+                                class="absolute top-2.5 left-2.5 w-9 h-9 rounded-full border-spacing-0.5 border-border-blue overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/avatar-myanh.jpg"
+                                    alt="Avatar Mỹ Anh"
+                                    class="w-full h-full"
+                                />
+                            </div>
+                            <p
+                                class="text-primary-text font-semibold text-sm text-center flex items-center justify-center gap-1 w-full"
+                            >
+                                Mỹ Anh Đỗ
+                                <i
+                                    class="fa-solid fa-circle-check text-border-blue text-xs"
+                                ></i>
+                            </p>
+                        </a>
+
+                        <a
+                            href="https://f8.edu.vn/stories/d8c8f4aa-d789-4d91-a302-34f584c2eec6"
+                            class="relative max-w-[120px] w-full flex flex-col items-center gap-2 shrink-0 cursor-pointer group"
+                        >
+                            <img
+                                class="w-full h-52 rounded-xl shadow-sm object-cover block transition-transform duration-300 group-hover:scale-105"
+                                src="./assets/images/story-taydu.jpg"
+                                alt="Story Tây Du Code"
+                            />
+                            <div
+                                class="absolute top-2.5 left-2.5 w-9 h-9 rounded-full border-spacing-0.5 border-border-blue overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/avatar-taydu.png"
+                                    alt="Avatar Tây Du Code"
+                                    class="w-full h-full"
+                                />
+                            </div>
+                            <p
+                                class="text-primary-text font-semibold text-sm text-center flex items-center justify-center gap-2 w-full"
+                            >
+                                Tây Du Code
+                                <i
+                                    class="fa-solid fa-circle-check text-border-blue text-xs"
+                                ></i>
+                            </p>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Banner -->
+                <div class="mt-8 rounded-2xl cursor-pointer">
+                    <a href="https://f8.edu.vn/landing/fullstack">
+                        <img
+                            src="./assets/images/banner.png"
+                            alt="Lớp học Fullstack qua Zoom"
+                            class="w-full h-auto object-cover rounded-xl"
+                        />
+                    </a>
+                </div>
+
+                <!-- Courses -->
+                <section class="mt-24 ml-12 mr-18">
+                    <h2 class="text-2xl font-black mb-11 text-primary-text">
+                        Dành cho bạn
+                    </h2>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-y-10 gap-x-6"
+                    >
+                        <!-- Courses 1 -->
+                        <a
+                            href="https://f8.edu.vn/courses/javascript-co-ban"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/js-basic.png"
+                                    alt="Lập Trinh JavaScript Cơ Bản"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Lập Trinh JavaScript Cơ Bản
+                                </h3>
+
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+
+                                <div
+                                    class="flex items-center gap-1 mb-3 text-sm"
+                                >
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(700)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        155.820
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        112
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        24 giờ 15 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Courses 2 -->
+                        <a
+                            href="https://f8.edu.vn/courses/javascript-nang-cao"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/js-advanced.png"
+                                    alt="Lập Trinh JavaScript Nâng Cao"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Lập Trinh JavaScript Nâng Cao
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(225)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        42.753
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        19
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        8 giờ 41 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Courses 3 -->
+                        <a
+                            href="https://f8.edu.vn/landing/laravel"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/lavarel-framework.png"
+                                    alt="Laravel framework"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Laravel framework
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="w-5 h-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Courses 4 -->
+                        <a
+                            href="https://f8.edu.vn/landing/nestjs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/nestjs.png"
+                                    alt="NestJs framework"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    NestJs framework
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="w-5 h-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="text-center mt-8 mb-10">
+                        <a
+                            href="#!"
+                            class="inline-block py-2.5 px-6 border-2 border-primary rounded-full text-sm font-semibold text-primary bg-transparent transition-colors duration-200 hover:bg-primary hover:text-white no-underline"
+                        >
+                            Xem thêm 8 Courses
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Participants -->
+                <div class="flex ml-12 mr-18 items-center gap-2">
+                    <div class="flex">
+                        <img src="./assets/images/man.png" class="size-7" />
+                        <img
+                            src="./assets/images/woman.png"
+                            class="size-7 -ml-3"
+                        />
+                        <img
+                            src="./assets/images/cat.png"
+                            class="size-7 -ml-3"
+                        />
+                    </div>
+                    <div class="text-sm text-primary-text">
+                        <strong>+470.508</strong> học viên đã tham gia
+                    </div>
+                </div>
+
+                <!-- Zoom Courses -->
+                <section class="mt-7 ml-12 mr-18">
+                    <div class="flex items-center gap-4 mb-11">
+                        <h2 class="text-2xl font-black text-primary-text m-0">
+                            Khóa học qua Zoom
+                        </h2>
+                        <span
+                            class="text-sm px-2.5 uppercase text-white bg-border-blue rounded-md"
+                            >Mới</span
+                        >
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-y-10 gap-x-6"
+                    >
+                        <!-- Course 1 -->
+                        <a
+                            href="https://f8.edu.vn/landing/vuejs-nuxtjs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/vue-nuxt.png"
+                                    alt="Vue & Nuxt"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">Vue & Nuxt</h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 2 -->
+                        <a
+                            href="https://f8.edu.vn/landing/fullstack"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/fullstack-online.png"
+                                    alt="Fullstack Web"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    Fullstack Web
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.6</span>
+                                    <span class="text-gray-color">(316)</span>
+                                </div>
+
+                                <div
+                                    class="flex justify-between items-center mt-auto"
+                                >
+                                    <div class="flex flex-col gap-2">
+                                        <div
+                                            class="flex items-center gap-2 text-sm font-medium text-primary-text"
+                                        >
+                                            <img
+                                                src="./assets/images/avatar-sondang.png"
+                                                alt="Sơn Đặng"
+                                                class="size-5 rounded-full object-cover"
+                                            />
+                                            <span>Sơn Đặng</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-1.5 text-gray-color text-sm"
+                                        >
+                                            <i
+                                                class="fa-solid fa-clock text-xs"
+                                            ></i>
+                                            398 giờ 15 phút
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-1.5 text-gray-color text-sm"
+                                    >
+                                        <i
+                                            class="fa-solid fa-circle-play text-xs"
+                                        ></i>
+                                        499
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 3 -->
+                        <a
+                            href="https://f8.edu.vn/landing/react-native"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/react-native.png"
+                                    alt="React Native"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    React Native
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 4 -->
+                        <a
+                            href="https://f8.edu.vn/landing/devops"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/devops-basic.png"
+                                    alt="DevOps Cơ Bản"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    DevOps Cơ Bản
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-tranxuan.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Trần Xuân</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 5 -->
+                        <a
+                            href="https://f8.edu.vn/landing/devops-nang-cao"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/devops-advanced.png"
+                                    alt="DevOps Nâng Cao"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    DevOps Nâng Cao
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-tranxuan.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Trần Xuân</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 6 -->
+                        <a
+                            href="https://f8.edu.vn/landing/nestjs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/nestjs.png"
+                                    alt="NestJS framework"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    NestJS framework
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 7 -->
+                        <a
+                            href="https://f8.edu.vn/landing/laravel"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/lavarel-framework.png"
+                                    alt="Laravel framework"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    Laravel framework
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 8 -->
+                        <a
+                            href="https://f8.edu.vn/landing/mysql"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/MySQL.png"
+                                    alt="MySQL chuyên sâu"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    MySQL chuyên sâu
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 9 -->
+                        <a
+                            href="https://f8.edu.vn/landing/postgresql"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div class="relative rounded-2xl aspect-video">
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/postgreSQL.png"
+                                    alt="PostgreSQL chuyên sâu"
+                                    class="absolute top-0 left-0 w-full h-full rounded-t-2xl object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    PostgreSQL chuyên sâu
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+                                <div
+                                    class="bg-primary/10 text-primary px-2.5 py-1 rounded-full text-xs font-semibold inline-block w-fit"
+                                >
+                                    Mới ra mắt
+                                </div>
+                                <div
+                                    class="flex items-center gap-2 text-sm font-medium text-primary-text mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/logo-f8.png"
+                                        alt="Author"
+                                        class="size-5 rounded-full object-cover"
+                                    />
+                                    <span>Hoàng An</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Pro Courses -->
+                <section class="mt-7 ml-12 mr-18">
+                    <div class="flex items-center gap-4 mb-11">
+                        <h2 class="text-2xl font-black text-primary-text m-0">
+                            Khóa học Pro
+                        </h2>
+                        <span
+                            class="text-sm px-2.5 py-0.5 font-semibold uppercase text-white bg-border-blue rounded-md"
+                            >Mới</span
+                        >
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-y-10 gap-x-6"
+                    >
+                        <!-- Course 1 -->
+                        <a
+                            href="https://f8.edu.vn/landing/htmlcss"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative rounded-2xl aspect-video overflow-hidden"
+                            >
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/HTML-CSS-PRO.png"
+                                    alt="HTML CSS Pro"
+                                    class="absolute top-0 left-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    HTML CSS Pro
+                                </h3>
+                                <div class="flex items-center gap-2">
+                                    <del
+                                        class="text-sm text-gray-color font-normal"
+                                        >2.500.000đ</del
+                                    >
+                                    <span
+                                        class="text-base font-semibold text-primary"
+                                        >1.299.000đ</span
+                                    >
+                                </div>
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(417)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between items-center mt-auto"
+                                >
+                                    <div class="flex flex-col gap-2">
+                                        <div
+                                            class="flex items-center gap-2 text-sm font-medium text-primary-text"
+                                        >
+                                            <img
+                                                src="./assets/images/avatar-sondang.png"
+                                                alt="Sơn Đặng"
+                                                class="size-5 rounded-full object-cover"
+                                            />
+                                            <span>Sơn Đặng</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-1.5 text-gray-color text-sm"
+                                        >
+                                            <i
+                                                class="fa-solid fa-clock text-xs"
+                                            ></i>
+                                            116 giờ 50 phút
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-1.5 text-gray-color text-sm"
+                                    >
+                                        <i
+                                            class="fa-solid fa-circle-play text-xs"
+                                        ></i>
+                                        590
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 2 -->
+                        <a
+                            href="https://f8.edu.vn/landing/sass"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative rounded-2xl aspect-video overflow-hidden"
+                            >
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/Sass.png"
+                                    alt="Ngôn ngữ Sass"
+                                    class="absolute top-0 left-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    Ngôn ngữ Sass
+                                </h3>
+                                <div class="flex items-center gap-2">
+                                    <del
+                                        class="text-sm text-gray-color font-normal"
+                                        >400.000đ</del
+                                    >
+                                    <span
+                                        class="text-base font-semibold text-primary"
+                                        >299.000đ</span
+                                    >
+                                </div>
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.5</span>
+                                    <span class="text-gray-color">(102)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between items-center mt-auto"
+                                >
+                                    <div class="flex flex-col gap-2">
+                                        <div
+                                            class="flex items-center gap-2 text-sm font-medium text-primary-text"
+                                        >
+                                            <img
+                                                src="./assets/images/avatar-sondang.png"
+                                                alt="Sơn Đặng"
+                                                class="size-5 rounded-full object-cover"
+                                            />
+                                            <span>Sơn Đặng</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-1.5 text-gray-color text-sm"
+                                        >
+                                            <i
+                                                class="fa-solid fa-clock text-xs"
+                                            ></i>
+                                            6 giờ 18 phút
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-1.5 text-gray-color text-sm"
+                                    >
+                                        <i
+                                            class="fa-solid fa-circle-play text-xs"
+                                        ></i>
+                                        27
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 3 -->
+                        <a
+                            href="https://js.f8.edu.vn/"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative rounded-2xl aspect-video overflow-hidden"
+                            >
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/JS-Pro.png"
+                                    alt="JavaScript Pro"
+                                    class="absolute top-0 left-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    JavaScript Pro
+                                </h3>
+                                <div class="flex items-center gap-2">
+                                    <del
+                                        class="text-sm text-gray-color font-normal"
+                                        >3.299.000đ</del
+                                    >
+                                    <span
+                                        class="text-base font-semibold text-primary"
+                                        >1.399.000đ</span
+                                    >
+                                </div>
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.8</span>
+                                    <span class="text-gray-color">(612)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between items-center mt-auto"
+                                >
+                                    <div class="flex flex-col gap-2">
+                                        <div
+                                            class="flex items-center gap-2 text-sm font-medium text-primary-text"
+                                        >
+                                            <img
+                                                src="./assets/images/avatar-sondang.png"
+                                                alt="Sơn Đặng"
+                                                class="size-5 rounded-full object-cover"
+                                            />
+                                            <span>Sơn Đặng</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-1.5 text-gray-color text-sm"
+                                        >
+                                            <i
+                                                class="fa-solid fa-clock text-xs"
+                                            ></i>
+                                            56 giờ 52 phút
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-1.5 text-gray-color text-sm"
+                                    >
+                                        <i
+                                            class="fa-solid fa-circle-play text-xs"
+                                        ></i>
+                                        302
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 4 -->
+                        <a
+                            href="https://f8.edu.vn/landing/fullstack"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative rounded-2xl aspect-video overflow-hidden"
+                            >
+                                <div
+                                    class="absolute top-2.5 left-2.5 bg-black/30 text-yellow-color px-1.5 py-2 rounded-lg text-sm z-10"
+                                >
+                                    <i class="fa-solid fa-crown"></i>
+                                </div>
+                                <img
+                                    src="./assets/images/fullstack-online.png"
+                                    alt="Fullstack Web"
+                                    class="absolute top-0 left-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold">
+                                    Fullstack Web
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Liên hệ</span
+                                >
+
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.6</span>
+                                    <span class="text-gray-color">(316)</span>
+                                </div>
+
+                                <div
+                                    class="flex justify-between items-center mt-auto"
+                                >
+                                    <div class="flex flex-col gap-2">
+                                        <div
+                                            class="flex items-center gap-2 text-sm font-medium text-primary-text"
+                                        >
+                                            <img
+                                                src="./assets/images/avatar-sondang.png"
+                                                alt="Sơn Đặng"
+                                                class="size-5 rounded-full object-cover"
+                                            />
+                                            <span>Sơn Đặng</span>
+                                        </div>
+                                        <div
+                                            class="flex items-center gap-1.5 text-gray-color text-sm"
+                                        >
+                                            <i
+                                                class="fa-solid fa-clock text-xs"
+                                            ></i>
+                                            398 giờ 15 phút
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="flex items-center gap-1.5 text-gray-color text-sm"
+                                    >
+                                        <i
+                                            class="fa-solid fa-circle-play text-xs"
+                                        ></i>
+                                        499
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 5 -->
+                        <a
+                            href="https://f8.edu.vn/learning/html-css"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/html-css-bacsic.png"
+                                    alt="HTML CSS từ Zero đến Hero"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    HTML CSS từ Zero đến Hero
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(591)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        220.614
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        117
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        29 giờ 5 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 6 -->
+                        <a
+                            href="https://f8.edu.vn/courses/javascript-co-ban"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/js-basic.png"
+                                    alt="Lập Trinh JavaScript Cơ Bản"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Lập Trinh JavaScript Cơ Bản
+                                </h3>
+
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(700)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        155.880
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        112
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        24 giờ 15 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 7 -->
+                        <a
+                            href="https://f8.edu.vn/courses/lessons-for-newbie"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/It-basic.png"
+                                    alt="Kiến Thức Nhập Môn IT"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Kiến Thức Nhập Môn IT
+                                </h3>
+
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(530)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        140.415
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        9
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        3 giờ 12 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 8 -->
+                        <a
+                            href="https://f8.edu.vn/learning/reactjs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/build-website-reactjs.png"
+                                    alt="Xây Dựng Website với ReactJS"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Xây Dựng Website với ReactJS
+                                </h3>
+
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.8</span>
+                                    <span class="text-gray-color">(374)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        81.415
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        112
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        27 giờ 32 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Free Courses -->
+                <section class="mt-7 ml-12 mr-18">
+                    <div class="flex items-center gap-4 mb-11">
+                        <h2 class="text-2xl font-black text-primary-text m-0">
+                            Khóa học Free
+                        </h2>
+                        <span
+                            class="text-sm px-2.5 py-0.5 font-semibold uppercase text-white bg-[#1473e6] rounded-md"
+                            >HOT</span
+                        >
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-y-10 gap-x-6"
+                    >
+                        <!-- Course 1 -->
+                        <a
+                            href="https://f8.edu.vn/learning/html-css"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/html-css-bacsic.png"
+                                    alt="HTML CSS từ Zero đến Hero"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    HTML CSS từ Zero đến Hero
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(591)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        220.614
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        117
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        29 giờ 5 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 2 -->
+                        <a
+                            href="https://f8.edu.vn/courses/tailwind-css"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/tailwind-css.png"
+                                    alt="Tailwind CSS"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Tailwind CSS
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        462
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        20
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        5 giờ 19 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 3 -->
+                        <a
+                            href="https://f8.edu.vn/courses/responsive-web-design"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/Responsive.png"
+                                    alt="Responsive Với Grid System"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Responsive Với Grid System
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(548)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        48.715
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        34
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        6 giờ 31 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 4 -->
+                        <a
+                            href="https://f8.edu.vn/courses/javascript-co-ban"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/js-basic.png"
+                                    alt="Lập Trình JavaScript Cơ Bản"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Lập Trình JavaScript Cơ Bản
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(700)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        155.880
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        112
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        24 giờ 15 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 5 -->
+                        <a
+                            href="https://f8.edu.vn/courses/javascript-nang-cao"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/js-advanced.png"
+                                    alt="Lập Trình JavaScript Nâng Cao"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Lập Trình JavaScript Nâng Cao
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(225)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        42.769
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        19
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        8 giờ 41 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 6 -->
+                        <a
+                            href="https://f8.edu.vn/learning/reactjs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/build-website-reactjs.png"
+                                    alt="Xây Dựng Website với ReactJS"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Xây Dựng Website với ReactJS
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.8</span>
+                                    <span class="text-gray-color">(374)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        81.415
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        112
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        27 giờ 32 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 7 -->
+                        <a
+                            href="https://f8.edu.vn/courses/nodejs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/node-express.png"
+                                    alt="Node & ExpressJS"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Node & ExpressJS
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.6</span>
+                                    <span class="text-gray-color">(681)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        50.802
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        36
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        12 giờ 8 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 8 -->
+                        <a
+                            href="https://f8.edu.vn/courses/devops-for-engineers"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/devops-for-engineers.png"
+                                    alt="Devops for Engineers"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Devops for Engineers
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.8</span>
+                                    <span class="text-gray-color">(8)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-users text-sm"
+                                        ></i>
+                                        521
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-circle-play text-sm"
+                                        ></i>
+                                        24
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-clock text-sm"
+                                        ></i>
+                                        2 giờ 41 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Other Courses -->
+                <section class="mt-7 ml-12 mr-18">
+                    <div class="flex items-center gap-4 mb-11">
+                        <h2 class="text-2xl font-black text-primary-text m-0">
+                            Khóa học khác
+                        </h2>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-y-10 gap-x-6"
+                    >
+                        <!-- Course 1 -->
+                        <a
+                            href="https://f8.edu.vn/learning/c-plus-plus"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/c++.png"
+                                    alt="Lập trình C++ cơ bản, nâng cao"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Lập trình C++ cơ bản, nâng cao
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.6</span>
+                                    <span class="text-gray-color">(200)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-users text-sm"></i
+                                        >40.418
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-clock text-sm"></i
+                                        >10 giờ 18 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 2 -->
+                        <a
+                            href="https://f8.edu.vn/learning/wsl-ubuntu"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/wsl-unbutu.png"
+                                    alt="Làm việc với Terminal & Ubuntu"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Làm việc với Terminal & Ubuntu
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(544)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-users text-sm"></i
+                                        >22.234
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-clock text-sm"></i
+                                        >4 giờ 59 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 3 -->
+                        <a
+                            href="https://f8.edu.vn/learning/kien-thuc-nhap-mon-it"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/It-basic.png"
+                                    alt="Kiến Thức Nhập Môn IT"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Kiến Thức Nhập Môn IT
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.9</span>
+                                    <span class="text-gray-color">(530)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-users text-sm"></i
+                                        >140.417
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-clock text-sm"></i
+                                        >3 giờ 12 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Course 4 -->
+                        <a
+                            href="https://f8.edu.vn/learning/app-dung-cham-tay-len-mat"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/app-touch.png"
+                                    alt='App "Đừng Chạm Tay Lên Mặt"'
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    App "Đừng Chạm Tay Lên Mặt"
+                                </h3>
+                                <span
+                                    class="text-base font-semibold text-primary"
+                                    >Miễn phí</span
+                                >
+                                <div class="flex items-center gap-1 text-sm">
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star text-yellow-color text-xs"
+                                    ></i>
+                                    <i
+                                        class="fa-solid fa-star-half-stroke text-yellow-color text-xs"
+                                    ></i>
+                                    <span class="font-semibold ml-1">4.8</span>
+                                    <span class="text-gray-color">(245)</span>
+                                </div>
+                                <div
+                                    class="flex justify-between flex-wrap items-center gap-1.5 text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-users text-sm"></i
+                                        >11.506
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-clock text-sm"></i
+                                        >1 giờ 34 phút
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Featured Posts -->
+                <section class="mt-7 ml-12 mr-18">
+                    <div class="flex items-center justify-between mb-11">
+                        <h2 class="text-2xl font-black text-primary-text m-0">
+                            Bài viết nổi bật
+                        </h2>
+                        <a
+                            href="https://f8.edu.vn/blog"
+                            class="text-primary font-semibold text-base hover:underline flex items-center gap-1"
+                        >
+                            Xem tất cả
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-y-10 gap-x-6"
+                    >
+                        <!-- Post 1 -->
+                        <a
+                            href="https://f8.edu.vn/blog/su-dung-proptypes-trong-reactjs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/pro-types.png"
+                                    alt="Sử dụng PropTypes trong ReactJS"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Sử dụng PropTypes trong ReactJS
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-hoangnguyen.jpg"
+                                        alt="Hoàng Nguyễn"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm"
+                                        >Hoàng Nguyễn</span
+                                    >
+                                    <span class="text-gray-color"
+                                        >· 3 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post 2 -->
+                        <a
+                            href="https://f8.edu.vn/blog/co-ban-life-cycle-cua-component-trong-reactjs"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/life-cycle.png"
+                                    alt="[Cơ bản] Life cycle của Component trong Reactjs"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    [Cơ bản] Life cycle của Component trong
+                                    Reactjs
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-nguyenlong.png"
+                                        alt="Nguyen Long"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm"
+                                        >Nguyen Long</span
+                                    >
+                                    <span class="text-gray-color"
+                                        >· 3 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post 3 -->
+                        <a
+                            href="https://f8.edu.vn/blog/security-cho-web-dev-owasp-top-10-va-cac-loi-bao-mat-pho-bien-trong-app-react"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/owasp.png"
+                                    alt="OWASP Top 10 trong React: Lỗi bảo mật hay gặp nhất"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    OWASP Top 10 trong React: Lỗi bảo mật hay
+                                    gặp nhất
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-ech.png"
+                                        alt="Ếch Trendy"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm flex items-center gap-1"
+                                    >
+                                        Ếch Trendy
+                                        <i
+                                            class="fa-solid fa-circle-check text-blue-500 text-[10px]"
+                                        ></i>
+                                    </span>
+                                    <span class="text-gray-color"
+                                        >· 1 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post 4 -->
+                        <a
+                            href="https://f8.edu.vn/blog/on-lai-kien-thuc-javascript-phan-1"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/review-js.png"
+                                    alt="Ôn lại kiến thức Javascript phần 1"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Ôn lại kiến thức Javascript phần 1
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-minhkha.jpg"
+                                        alt="Minh Kha"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm"
+                                        >Minh Kha</span
+                                    >
+                                    <span class="text-gray-color"
+                                        >· 3 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post 5 -->
+                        <a
+                            href="https://f8.edu.vn/blog/javascript-es2025-cu-phap-moi-array-methods-va-patterns-thay-the-lodash"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/js-es2025.png"
+                                    alt="JS ES2025+: Bye lodash, chào native methods"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    JS ES2025+: Bye lodash, chào native methods
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-ech.png"
+                                        alt="Ếch Trendy"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm flex items-center gap-1"
+                                    >
+                                        Ếch Trendy
+                                        <i
+                                            class="fa-solid fa-circle-check text-blue-500 text-[10px]"
+                                        ></i>
+                                    </span>
+                                    <span class="text-gray-color"
+                                        >· 1 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post 6 -->
+                        <a
+                            href="https://f8.edu.vn/blog/tim-hieu-ve-html-va-css"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/learn-html-css.png"
+                                    alt="Tìm hiểu về HTML và CSS"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Tìm hiểu về HTML và CSS
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-nguyenlong.png"
+                                        alt="Nguyen Long"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm"
+                                        >Nguyen Long</span
+                                    >
+                                    <span class="text-gray-color"
+                                        >· 17 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post 7 -->
+                        <a
+                            href="https://f8.edu.vn/blog/tailwind-css-va-cach-cai-dat-co-ban"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/setup-tailwind.png"
+                                    alt="Tailwind css và cách cài đặt cơ bản"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Tailwind css và cách cài đặt cơ bản
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-quantran.png"
+                                        alt="Quang Trần"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm"
+                                        >Quang Trần</span
+                                    >
+                                    <span class="text-gray-color"
+                                        >· 2 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Post 8 -->
+                        <a
+                            href="https://f8.edu.vn/blog/tailwind-css-cho-du-an-thuc-te-cau-truc-component-design-token-va-cach-tranh-c"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden"
+                            >
+                                <img
+                                    src="./assets/images/battle-tailwind.png"
+                                    alt="Tailwind CSS thực chiến: tránh class name rối loạn"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Tailwind CSS thực chiến: tránh class name
+                                    rối loạn
+                                </h3>
+                                <div
+                                    class="flex flex-wrap items-center gap-2 text-sm mt-auto"
+                                >
+                                    <img
+                                        src="./assets/images/avatar-ech.png"
+                                        alt="Ếch Trendy"
+                                        class="size-6 rounded-full object-cover"
+                                    />
+                                    <span
+                                        class="font-bold text-primary-text text-sm flex items-center gap-1"
+                                    >
+                                        Ếch Trendy
+                                        <i
+                                            class="fa-solid fa-circle-check text-blue-500 text-[10px]"
+                                        ></i>
+                                    </span>
+                                    <span class="text-gray-color"
+                                        >· 1 phút đọc</span
+                                    >
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Featured Videos -->
+                <section class="mt-7 ml-12 mr-18">
+                    <div class="flex items-center justify-between mb-11">
+                        <h2 class="text-2xl font-black text-primary-text m-0">
+                            Videos nổi bật
+                        </h2>
+                        <a
+                            href="https://www.youtube.com/c/F8VNOfficial"
+                            class="text-primary font-semibold text-base hover:underline flex items-center gap-1"
+                            target="_blank"
+                        >
+                            Xem tất cả
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(280px,1fr))] lg:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-y-10 gap-x-6"
+                    >
+                        <!-- Video 1 -->
+                        <a
+                            href="https://youtu.be/R6plN3FvzFY"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/html-css.jpg"
+                                    alt="Bạn sẽ làm được gì sau khóa học?"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-semibold px-2 py-0.5 rounded-md"
+                                >
+                                    03:15
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Bạn sẽ làm được gì sau khóa học?
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >1.150.413
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >6.754
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >150
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Video 2 -->
+                        <a
+                            href="https://youtu.be/YH-E4Y3EaT4"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/practice.jpg"
+                                    alt="Sinh viên IT đi thực tập tại doanh nghiệp cần biết những gì?"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-semibold px-2 py-0.5 rounded-md"
+                                >
+                                    34:51
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Sinh viên IT đi thực tập tại doanh nghiệp
+                                    cần biết những gì?
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >266.163
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >6.452
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >235
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Video 3 -->
+                        <a
+                            href="https://youtu.be/DpvYHLUiZpc"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/learning-method.jpg"
+                                    alt="Phương pháp học lập trình của Admin F8?"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-semibold px-2 py-0.5 rounded-md"
+                                >
+                                    24:06
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Phương pháp học lập trình của Admin F8?
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >132.194
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >6.170
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >336
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Video 4 -->
+                        <a
+                            href="https://youtu.be/sgq7BH6WxL8"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/kids-code.jpg"
+                                    alt='"Code Thiếu Nhi Battle" Tranh Giành Trà Sữa Size L'
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-semibold px-2 py-0.5 rounded-md"
+                                >
+                                    25:10
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    "Code Thiếu Nhi Battle" Tranh Giành Trà Sữa
+                                    Size L
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >282.931
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >5.656
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >180
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Video 5 -->
+                        <a
+                            href="https://youtu.be/x0fSBAgBrOQ"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/build-website-reactjs.png"
+                                    alt="ReactJS là gì? Tại sao nên học ReactJS?"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-semibold px-2 py-0.5 rounded-md"
+                                >
+                                    10:41
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    ReactJS là gì? Tại sao nên học ReactJS?
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >530.551
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >3.951
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >346
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Video 6 -->
+                        <a
+                            href="https://youtu.be/AzmdwZ6e_aM"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/tag-html-css.jpg"
+                                    alt="Các thẻ HTML thông dụng"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Các thẻ HTML thông dụng
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >378.790
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >3.863
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >207
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Video 7 -->
+                        <a
+                            href="https://youtu.be/G19jZzK5FWI"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/flex-box.jpg"
+                                    alt="Học Flexbox qua ví dụ"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-semibold px-2 py-0.5 rounded-md"
+                                >
+                                    35:04
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Học Flexbox qua ví dụ
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >263.426
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >3.504
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >215
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Video 8 -->
+                        <a
+                            href="https://youtu.be/oF7isq9IjZM"
+                            class="flex flex-col h-full bg-bg-secondary rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-text-color"
+                        >
+                            <div
+                                class="relative aspect-video rounded-t-2xl overflow-hidden group"
+                            >
+                                <img
+                                    src="./assets/images/income.jpg"
+                                    alt="Làm sao để có thu nhập cao và đi xa hơn trong ngành IT?"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div
+                                    class="absolute bottom-3 left-3 size-8 bg-white/90 rounded-full flex items-center justify-center shadow-md"
+                                >
+                                    <i
+                                        class="fa-solid fa-play text-gray-800 text-xs ml-0.5"
+                                    ></i>
+                                </div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-semibold px-2 py-0.5 rounded-md"
+                                >
+                                    25:40
+                                </div>
+                            </div>
+                            <div class="flex flex-col flex-1 py-4 px-5 gap-4">
+                                <h3 class="text-base font-bold leading-relaxed">
+                                    Làm sao để có thu nhập cao và đi xa hơn
+                                    trong ngành IT?
+                                </h3>
+                                <div
+                                    class="flex justify-between flex-wrap items-center text-gray-color text-sm mt-auto"
+                                >
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-eye text-sm"></i
+                                        >85.183
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-thumbs-up text-sm"
+                                        ></i
+                                        >3.429
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i
+                                            class="fa-solid fa-comment text-sm"
+                                        ></i
+                                        >233
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-footer-bg text-footer-text pt-16 pb-8 px-14 mt-20">
+            <div
+                class="max-w-[1400px] mx-auto flex flex-row flex-nowrap gap-x-8 gap-y-10 justify-between"
+            >
+                <!-- Col 1 -->
+                <div class="flex flex-col w-1/4">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img
+                            src="./assets/images/logo-f8.png"
+                            alt="F8 Logo"
+                            class="size-[38px] rounded-lg object-cover"
+                        />
+                        <h3
+                            class="text-white font-black text-sm leading-snug w-[130px]"
+                        >
+                            HỌC LẬP TRÌNH ĐỂ ĐI LÀM
+                        </h3>
+                    </div>
+                    <p class="text-sm mb-3">
+                        Điện thoại:
+                        <a
+                            href="tel:0819198989"
+                            class="hover:text-white transition-colors"
+                            >0819198989</a
+                        >
+                    </p>
+                    <p class="text-sm mb-3">
+                        Email:
+                        <a
+                            href="mailto:contact@f8.edu.vn"
+                            class="hover:text-white transition-colors"
+                            >contact@f8.edu.vn</a
+                        >
+                    </p>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Địa chỉ liên hệ: Số 1, ngõ 41, Trần Duy Hưng, Cầu Giấy,
+                        Hà Nội
+                    </p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <a
+                            href="https://www.dmca.com/Protection/Status.aspx?id=1b325c69-aeb7-4e32-8784-a0009613323a&refurl=https%3a%2f%2ff8.edu.vn%2f&rlo=true"
+                            target="_blank"
+                        >
+                            <img
+                                src="./assets/images/DMCA.png"
+                                alt="DMCA PROTECTED"
+                                class="h-6"
+                            />
+                        </a>
+                        <a
+                            href="http://online.gov.vn/Home/WebDetails/138269"
+                            target="_blank"
+                        >
+                            <img
+                                src="./assets/images/bo-cong-thuong.png"
+                                alt="Đã thông báo bộ công thương"
+                                class="h-10"
+                            />
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="flex flex-col w-40">
+                    <h3 class="text-white font-bold text-sm uppercase mb-5">
+                        VỀ F8
+                    </h3>
+                    <ul class="space-y-3.5 text-sm">
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/about-us"
+                                class="hover:text-white transition-colors block"
+                                >Giới thiệu</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/contact"
+                                class="hover:text-white transition-colors block"
+                                >Liên hệ</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/policies"
+                                class="hover:text-white transition-colors block"
+                                >Điều khoản & Quy định</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/information-security-policy"
+                                class="hover:text-white transition-colors block"
+                                >Chính sách bảo mật</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="flex flex-col w-44">
+                    <h3 class="text-white font-bold text-sm uppercase mb-5">
+                        HỖ TRỢ
+                    </h3>
+                    <ul class="space-y-3.5 text-sm">
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/payment-policy"
+                                class="hover:text-white transition-colors block"
+                                >Chính sách thanh toán</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/shipping-policy"
+                                class="hover:text-white transition-colors block"
+                                >Chính sách vận chuyển</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/inspection-policy"
+                                class="hover:text-white transition-colors block"
+                                >Chính sách kiểm hàng</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/pricing-information"
+                                class="hover:text-white transition-colors block"
+                                >Quy định về giá</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="flex flex-col w-44">
+                    <h3 class="text-white font-bold text-sm uppercase mb-5">
+                        CÔNG CỤ
+                    </h3>
+                    <ul class="space-y-3.5 text-sm">
+                        <li>
+                            <a
+                                href="https://cv.f8.edu.vn/"
+                                class="hover:text-white transition-colors block"
+                                >Tạo CV xin việc</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://f8.edu.vn/links"
+                                class="hover:text-white transition-colors block"
+                                >Rút gọn liên kết</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://clippy.f8.edu.vn/"
+                                class="hover:text-white transition-colors block"
+                                >Clip-path maker</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://snippet-generator.f8.edu.vn/"
+                                class="hover:text-white transition-colors block"
+                                >Snippet generator</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://grid.f8.edu.vn/"
+                                class="hover:text-white transition-colors block"
+                                >CSS Grid generator</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://botayra.f8.edu.vn/"
+                                class="hover:text-white transition-colors block"
+                                >Cảnh báo sờ tay lên mặt</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 5 -->
+                <div class="flex flex-col w-1/4">
+                    <h3
+                        class="text-white font-bold text-sm uppercase mb-5 leading-relaxed"
+                    >
+                        CÔNG TY CỔ PHẦN CÔNG NGHỆ GIÁO DỤC F8
+                    </h3>
+                    <p class="text-sm mb-4 leading-relaxed">
+                        Địa chỉ: Tầng 4, Tòa nhà Anh Minh, số 36 Hoàng Cầu,
+                        Thành phố Hà Nội
+                    </p>
+                    <p class="text-sm leading-relaxed">
+                        Mã số doanh nghiệp: 0109922901 do Chi cục Thuế Quận Đống
+                        Đa, Cục Thuế TP. Hà Nội cấp ngày 04/03/2022
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer bottom -->
+            <div
+                class="mx-auto mt-14 pt-8 border-t border-footer-border flex flex-row items-center justify-between gap-4"
+            >
+                <p class="text-sm">
+                    © 2018 - 2026 F8. Nền tảng học tập trực tuyến.
+                </p>
+                <div class="flex items-center gap-3">
+                    <a
+                        href="https://www.youtube.com/@f8vnofficial"
+                        class="size-9 bg-footer-border rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa-brands fa-youtube text-youtube-red text-lg"
+                        ></i>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/f8vnofficial"
+                        class="size-9 bg-footer-border rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity"
+                        target="_blank"
+                    >
+                        <i
+                            class="fa-brands fa-facebook-f text-[#0866FF] text-lg"
+                        ></i>
+                    </a>
+                    <a
+                        href="https://www.tiktok.com/@f8hoclaptrinh"
+                        class="size-9 bg-footer-border rounded-lg flex items-center justify-center hover:opacity-80 transition-opacity"
+                        target="_blank"
+                    >
+                        <i class="fa-brands fa-tiktok text-white text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
