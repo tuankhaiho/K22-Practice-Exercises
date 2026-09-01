@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Justice Law Firm</title>
+        <link rel="icon" type="image/png" href="../assets/images/Logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Slab:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            primary: ["Roboto Slab", "sans-serif"],
+                            secondary: ["Manrope", "serif"],
+                        },
+                        colors: {
+                            dark: "#29302E",
+                            grayBorder: "#E5E5E5",
+                            beigeLight: "#F5EAD4",
+                            yellow: "#FED464",
+                            primary: "#0E1412",
+                            colorWhite: "#fff",
+                            grayLight: "#BECCC7",
+                            grayDark: "#586863",
+                            orangePrimary: "#F1694A",
+                            beige: "#F8EBC9",
+                            green: "#017848",
+                        },
+                        boxShadow: {
+                            card: "0 15px 40px rgba(0,0,0,0.08)",
+                            "card-light": "0 15px 40px rgba(0,0,0,0.04)",
+                            "card-heavy": "0 20px 50px rgba(0,0,0,0.08)",
+                        },
+                        maxWidth: {
+                            1170: "1170px",
+                            1440: "1440px",
+                            470: "470px",
+                        },
+                        fontSize: {
+                            "heading-small": "30px",
+                            "heading-medium": "42px",
+                            "heading-large": "60px",
+                            small: "10px",
+                            medium: "12px",
+                            large: "18px",
+                        },
+                        animation: {
+                            "spin-slow": "spin 5s linear infinite",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer components {
+                .nav-hover {
+                    @apply hover:text-orangePrimary focus:text-orangePrimary transition-colors;
+                }
+                .btn-hover {
+                    @apply hover:bg-orangePrimary hover:text-colorWhite focus:bg-orangePrimary focus:text-colorWhite transition-colors duration-300 hover:opacity-80;
+                }
+                .btn-team-hover {
+                    @apply transition-all duration-300 group-hover:opacity-100;
+                }
+            }
+        </style>
+    </head>
+    <body class="font-primary text-primary font-normal">
+        <div
+            class="max-w-1440 mx-auto w-full overflow-x-hidden border border-solid"
+        >
+            <!-- Hero -->
+            <div class="bg-beige px-5 pb-10 pt-8">
+                <!-- Hero Header -->
+                <header
+                    class="flex items-center justify-between xl:px-32"
+                >
+                    <button
+                        class="text-primary z-50 block text-2xl focus:outline-none md:hidden"
+                    >
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <!-- Logo -->
+                    <a href="../index.html" class="hidden md:block">
+                        <img
+                            src="../assets/images/Logo.png"
+                            alt="Justice Law Firm"
+                            class="h-full w-full object-cover md:w-[70%]"
+                        />
+                    </a>
+                    <!-- Menu -->
+                    <nav class="hidden md:block">
+                        <ul
+                            class="flex w-full items-center justify-center gap-6 xl:gap-10"
+                        >
+                            <li>
+                                <a
+                                    href="../index.html"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="../about.html"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="../practice.html"
+                                    class="group-hover:text-orangePrimary text-orangePrimary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                >
+                                    Practice Areas
+                                    <i
+                                        class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"
+                                    ></i>
+                                </a>
+                                <!-- Submenu -->
+                                <div
+                                    class="invisible absolute left-0 top-full z-50 translate-y-2 pt-6 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                                >
+                                    <ul
+                                        class="bg-colorWhite shadow-card border-grayBorder flex w-56 flex-col border py-2"
+                                    >
+                                        <li>
+                                            <a
+                                                href="../practice-details/divorce.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Divorce</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../practice-details/personal-injury.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Personal Injury
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../practice-details/employment.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Employment
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../practice-details/immigration.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Immigration
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../practice-details/family.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Family
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../practice-details/property.html"
+                                                class="font-secondary hover:text-orangePrimary text-orangePrimary flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Property
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="../attorneys.html"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                >
+                                    Attorneys
+                                    <i
+                                        class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"
+                                    ></i>
+                                </a>
+                                <!-- Submenu -->
+                                <div
+                                    class="invisible absolute left-0 top-full z-50 translate-y-2 pt-6 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                                >
+                                    <ul
+                                        class="bg-colorWhite shadow-card border-grayBorder flex w-56 flex-col border py-2"
+                                    >
+                                        <li>
+                                            <a
+                                                href="../attorneys-profile/david-warner.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >David Warner</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../attorneys-profile/aaron-finch.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Aaron Finch</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../attorneys-profile/jamie-watts.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Jamie Watts</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../attorneys-profile/ellyse-perry.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Ellyse Perry</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../attorneys-profile/meg-lanning.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Meg Lanning</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../attorneys-profile/peter-siddle.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Peter Siddle</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="#"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                >
+                                    Page
+                                    <i
+                                        class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"
+                                    ></i>
+                                </a>
+                                <!-- Submenu -->
+                                <div
+                                    class="invisible absolute left-0 top-full z-50 translate-y-2 pt-6 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                                >
+                                    <ul
+                                        class="bg-colorWhite shadow-card border-grayBorder flex w-56 flex-col border py-2"
+                                    >
+                                        <li>
+                                            <a
+                                                href="../blog.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Blog</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../contact.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Contact</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../index.html#faq"
+                                                class="font-secondary hover:text-orangePrimary flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >FAQ</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../404.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >404</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="../coming-soon.html"
+                                                class="font-secondary hover:text-orangePrimary flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Coming Soon</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Contact -->
+                    <div
+                        class="flex shrink-0 items-center whitespace-nowrap text-base font-medium"
+                    >
+                        <span class="inline-block">Call :</span>
+                        <a
+                            href="tel:000123456789"
+                            class="ml-1 inline-block text-base font-bold duration-300 hover:-translate-y-1 md:text-xs lg:text-base"
+                            >(000) 123 456 789</a
+                        >
+                    </div>
+                </header>
+            </div>
+
+            <!-- Detail -->
+            <div class="bg-colorWhite px-5 pb-12 pt-10 md:pt-0">
+                <section class="grid grid-cols-1">
+                    <!-- Image -->
+                    <img
+                        src="../assets/images/Property-Law.jpg"
+                        alt="Property Law"
+                        class="md:max-w-1170 mx-auto mb-5 w-full object-cover"
+                    />
+
+                    <!-- Content -->
+                    <div class="mx-auto max-w-[800px] px-4">
+                        <div class="max-w-3xl">
+                            <h2
+                                class="text-large md:text-heading-medium font-primary text-primary mb-5 font-bold leading-tight"
+                            >
+                                Tulsa Property Law Attorney
+                            </h2>
+
+                            <p
+                                class="text-grayDark text-small md:text-large font-secondary mb-5 leading-4 md:leading-7"
+                            >
+                                If you are facing a dispute over property, you
+                                may be feeling frustrated and unsure of your
+                                rights. Property disputes can affect your
+                                finances, your home, and your peace of mind as
+                                you deal with the legal and financial burdens
+                                that come with them. If you are dealing with a
+                                real estate or property matter, then you want an
+                                experienced and knowledgeable property law
+                                attorney by your side.
+                            </p>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large mb-5 leading-4 md:leading-7"
+                            >
+                                At The Rode Law Firm, a property law firm with
+                                locations in Tulsa and Sapulpa, Oklahoma, we are
+                                focused on protecting our clients' property
+                                rights and interests. We represent people in the
+                                Tulsa, Sapulpa, Broken Arrow, Sand Springs, and
+                                Owasso, Oklahoma areas who are facing property
+                                disputes by providing professional
+                                representation both in and out of the courtroom.
+                            </p>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large mb-10 leading-4 md:leading-7"
+                            >
+                                If you are involved in a property dispute, the
+                                steps you take afterward directly affect the
+                                outcome of your case. Keeping thorough records
+                                of deeds, titles, and agreements, and responding
+                                promptly to any notices or claims are prudent
+                                and highly recommended. Many issues, such as
+                                boundary disagreements or title defects, may
+                                build up over weeks or months before being
+                                resolved. Protecting your investment should be
+                                your number one priority.
+                            </p>
+                        </div>
+
+                        <div class="max-w-3xl">
+                            <h2
+                                class="text-large font-primary text-primary md:text-heading-medium mb-5 font-bold leading-tight"
+                            >
+                                Common Property Law Matters
+                            </h2>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large mb-5 leading-4 md:leading-7"
+                            >
+                                Sometimes a property dispute becomes complicated
+                                because of disagreements between owners,
+                                neighbors, or tenants that may not be obvious
+                                right away, such as:
+                            </p>
+
+                            <ul
+                                class="text-primary text-small font-secondary md:text-large mb-5 list-disc space-y-2 pl-5 font-medium md:leading-7"
+                            >
+                                <li>Boundary and easement disputes</li>
+                                <li>Title defects and quiet title actions</li>
+                                <li>Landlord-tenant disputes</li>
+                                <li>Breach of real estate contracts</li>
+                                <li>Zoning and land use disputes</li>
+                            </ul>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large mb-10 leading-4 md:leading-7"
+                            >
+                                At The Rode Law Firm, we will work with you to
+                                get you the best outcome possible for your case.
+                                We understand how stressful a property dispute
+                                can be, and how the effects of such can be
+                                life-altering. Our passion for helping clients
+                                protect what they've worked hard for makes us an
+                                excellent legal partner for you. We care about
+                                you and want to help you resolve your case
+                                fairly and quickly. With over 30 years of legal
+                                experience, we have the skills needed to
+                                effectively defend you as your property law
+                                attorney. You deserve a fair resolution for your
+                                property matter.
+                            </p>
+                        </div>
+
+                        <div class="max-w-3xl">
+                            <h2
+                                class="text-large md:text-heading-medium font-primary text-primary mb-5 font-bold leading-tight"
+                            >
+                                How We Will Handle Your Case?
+                            </h2>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large mb-5 leading-4 md:leading-7"
+                            >
+                                When we meet with new clients, our priority is
+                                to establish a strong attorney-client
+                                relationship. This will help us collaborate with
+                                you throughout the entire legal process, and
+                                make you feel comfortable coming to us with any
+                                questions or concerns along the way.
+                                Communication is imperative and constant
+                                throughout your case. We'll speak at least once
+                                every three weeks so that both parties are never
+                                in the dark. As our client, you will receive a
+                                full list of do's and don'ts while we handle
+                                your legal situation. This will guide you on
+                                best practices so that we can get you the
+                                outcome you deserve.
+                            </p>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large mb-10 leading-4 md:leading-7"
+                            >
+                                The legal process can be confusing, so you may
+                                be wondering: how long will the process take?
+                                The answer to this question is dependent upon
+                                the nature of the property dispute, how the
+                                other party responds to your claim, and whether
+                                or not we need to go to trial. No matter what,
+                                your attorneys at The Rode Law Firm will be by
+                                your side to answer any questions or concerns as
+                                best we can.
+                            </p>
+                        </div>
+
+                        <div class="max-w-3xl">
+                            <h2
+                                class="text-large font-primary text-primary md:text-heading-medium mb-5 font-bold leading-tight"
+                            >
+                                What We Can Help You Resolve
+                            </h2>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large mb-5 leading-4 md:leading-7"
+                            >
+                                If you are facing a property dispute, you have
+                                the right to protect your ownership interests
+                                and seek a fair resolution. We can often help
+                                you resolve:
+                            </p>
+
+                            <ul
+                                class="text-primary text-small font-secondary md:text-large mb-10 list-disc space-y-2 pl-5 font-medium md:leading-7"
+                            >
+                                <li>Boundary line disputes</li>
+                                <li>Quiet title and title defect claims</li>
+                                <li>Easement and right-of-way disputes</li>
+                                <li>Landlord-tenant disputes and evictions</li>
+                                <li>Breach of purchase or sale agreements</li>
+                                <li>Zoning variances and land use disputes</li>
+                                <li>Adverse possession claims</li>
+                                <li>Homeowners association disputes</li>
+                                <li>Property partition actions</li>
+                                <li>
+                                    Real estate contract negotiations and more
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="max-w-3xl">
+                            <h2
+                                class="text-large font-primary text-primary md:text-heading-medium mb-5 font-bold leading-tight"
+                            >
+                                Call Our Law Firm Today
+                            </h2>
+
+                            <p
+                                class="text-grayDark text-small font-secondary md:text-large leading-4 md:leading-7"
+                            >
+                                Our property law attorneys and team will work on
+                                your case for you from start to finish. With a
+                                proven process for client success, we'll manage
+                                your case to protect your property interests —
+                                both now and in the future. We are located in
+                                Tulsa and Sapulpa, Oklahoma, and we are proud to
+                                serve clients in other areas of Oklahoma
+                                including Broken Arrow, Sand Springs, and
+                                Owasso. Contact us today for legal help you can
+                                count on.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- CTA -->
+            <div
+                class="bg-green flex items-center justify-center px-5 py-16 md:py-24"
+            >
+                <section
+                    class="text-colorWhite flex flex-col items-center text-center"
+                >
+                    <p class="text-medium md:text-large">#CTA</p>
+                    <h2
+                        class="text-heading-small lg:text-heading-medium mt-2 font-bold md:text-4xl"
+                    >
+                        Dealing With a Issue?
+                    </h2>
+                    <p
+                        class="text-small md:text-large font-secondary md:max-w-470 mt-4 max-w-[276px] md:mt-5"
+                    >
+                        Where every injury is personal. We are a different kind
+                        of law firm. Let our small, passionate group of trial
+                        lawyers fight for your rights!
+                    </p>
+                    <a
+                        href="../contact.html"
+                        class="bg-orangePrimary font-secondary btn-hover mt-8 inline-block px-7 py-3 text-sm font-semibold md:mt-9 md:px-9 md:py-4 md:text-base"
+                        >Get a Consultations</a
+                    >
+                </section>
+            </div>
+            <!-- Footer -->
+            <footer class="bg-primary pb-8 pt-7 md:pb-12 md:pt-24">
+                <div class="max-w-1170 mx-auto px-5 md:px-14 xl:px-0">
+                    <!-- Top section -->
+                    <div
+                        class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 xl:gap-8"
+                    >
+                        <!-- Column 1 -->
+                        <div class="lg:col-span-3">
+                            <h2
+                                class="text-colorWhite font-primary mb-5 text-xl font-bold"
+                            >
+                                Justice
+                            </h2>
+                            <ul class="flex flex-col gap-4">
+                                <li>
+                                    <a
+                                        href="../coming-soon.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Privacy Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../coming-soon.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Terms & Conditions</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../coming-soon.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Cookie Preferences</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column 2 -->
+                        <div class="mt-2 md:mt-0 lg:col-span-2">
+                            <h2
+                                class="text-colorWhite font-primary mb-5 text-xl font-bold"
+                            >
+                                Pages
+                            </h2>
+                            <ul class="flex flex-col gap-4">
+                                <li>
+                                    <a
+                                        href="../index.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../about.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >About</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../practice.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Practice Areas</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../attorneys.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Attorneys</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column 3 -->
+                        <div class="mt-2 md:mt-0 lg:col-span-3">
+                            <h2
+                                class="text-colorWhite font-primary mb-5 text-xl font-bold"
+                            >
+                                Justice
+                            </h2>
+                            <ul class="flex flex-col gap-4">
+                                <li
+                                    class="text-grayLight font-secondary text-sm"
+                                >
+                                    50 Harrison Street, PH Suite 445
+                                    <br />
+                                    Hoboken, NJ 07030
+                                </li>
+                                <li
+                                    class="text-grayLight font-secondary text-sm"
+                                >
+                                    <a
+                                        href="tel:(000) 123-4567"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >(000) 123-4567</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="mailto:yourlawfirm22@gmail.com"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >yourlawfirm22@gmail.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column 4  -->
+                        <div class="relative mt-4 md:mt-0 lg:col-span-4">
+                            <div
+                                class="relative h-[191px] w-full overflow-hidden md:h-full md:min-h-[220px]"
+                            >
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14897.995869774277!2d105.79229605903353!3d21.01271202238798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4df3c6c329%3A0xd8e14fe61fd32604!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIEdJw4FPIEThu6RDIEY4!5e0!3m2!1sen!2s!4v1787749590685!5m2!1sen!2s"
+                                    class="absolute left-0 top-0 h-full w-full border-0 contrast-75 grayscale-[0.2] hue-rotate-180 invert"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                ></iframe>
+
+                                <div
+                                    class="bg-colorWhite font-secondary text-primary pointer-events-none absolute left-4 top-4 px-4 py-2 text-sm font-medium md:left-6 md:top-6 md:px-6 md:py-3 md:text-lg"
+                                >
+                                    View Large Map
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom section -->
+                    <div
+                        class="border-dark mt-16 flex flex-col items-start justify-between gap-6 border-t pt-8 md:mt-24 md:flex-row md:items-end md:gap-0"
+                    >
+                        <div>
+                            <a href="../index.html">
+                                <img
+                                    src="../assets/images/Logo.png"
+                                    alt="Justice Law Firm"
+                                    class="h-10 object-contain brightness-0 invert"
+                                />
+                            </a>
+                            <p
+                                class="text-grayDark font-secondary mt-4 text-sm"
+                            >
+                                Copyright © 2022 UI HUT All Rights Reserved
+                            </p>
+                        </div>
+                        <div class="flex gap-2">
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-twitter text-sm"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="../assets/js/mobile-menu.js"></script>
+    </body>
+</html>

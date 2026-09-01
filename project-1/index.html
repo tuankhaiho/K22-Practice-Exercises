@@ -1,0 +1,1608 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Justice Law Firm</title>
+        <link rel="icon" type="image/png" href="./assets/images/Logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Slab:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            primary: ["Roboto Slab", "sans-serif"],
+                            secondary: ["Manrope", "serif"],
+                        },
+                        colors: {
+                            dark: "#29302E",
+                            grayBorder: "#E5E5E5",
+                            beigeLight: "#F5EAD4",
+                            yellow: "#FED464",
+                            primary: "#0E1412",
+                            colorWhite: "#fff",
+                            grayLight: "#BECCC7",
+                            grayDark: "#586863",
+                            orangePrimary: "#F1694A",
+                            beige: "#F8EBC9",
+                            green: "#017848",
+                        },
+                        boxShadow: {
+                            card: "0 15px 40px rgba(0,0,0,0.08)",
+                            "card-light": "0 15px 40px rgba(0,0,0,0.04)",
+                            "card-heavy": "0 20px 50px rgba(0,0,0,0.08)",
+                        },
+                        maxWidth: {
+                            1170: "1170px",
+                            1440: "1440px",
+                            470: "470px",
+                        },
+                        fontSize: {
+                            "heading-small": "30px",
+                            "heading-medium": "42px",
+                            "heading-large": "60px",
+                            small: "10px",
+                            medium: "12px",
+                            large: "18px",
+                        },
+                        animation: {
+                            "spin-slow": "spin 5s linear infinite",
+                        },
+                    },
+                },
+            };
+        </script>
+        <style type="text/tailwindcss">
+            @layer components {
+                .nav-hover {
+                    @apply hover:text-orangePrimary focus:text-orangePrimary transition-colors;
+                }
+                .btn-hover {
+                    @apply hover:bg-orangePrimary hover:text-colorWhite focus:bg-orangePrimary focus:text-colorWhite transition-colors duration-300 hover:opacity-80;
+                }
+                .btn-team-hover {
+                    @apply transition-all duration-300 group-hover:opacity-100;
+                }
+            }
+        </style>
+    </head>
+    <body class="font-primary text-primary font-normal">
+        <div
+            class="max-w-1440 mx-auto w-full overflow-x-hidden border border-solid"
+        >
+            <!-- Hero -->
+            <div class="bg-beige px-5 pb-10 pt-8">
+                <!-- Hero Header -->
+                <header
+                    class="flex items-center justify-between xl:px-32"
+                >
+                    <button
+                        class="text-large text-primary z-50 block focus:outline-none md:hidden"
+                    >
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <!-- Logo -->
+                    <a href="./index.html" class="hidden md:block">
+                        <img
+                            src="./assets/images/Logo.png"
+                            alt="Justice Law Firm"
+                            class="h-full w-full object-cover md:w-[70%]"
+                        />
+                    </a>
+                    <!-- Menu -->
+                    <nav class="hidden md:block">
+                        <ul
+                            class="flex w-full items-center justify-center gap-6 xl:gap-10"
+                        >
+                            <li>
+                                <a
+                                    href="./index.html"
+                                    class="group-hover:text-orangePrimary text-orangePrimary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="./about.html"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="./practice.html"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                >
+                                    Practice Areas
+                                    <i
+                                        class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"
+                                    ></i>
+                                </a>
+                                <!-- Submenu -->
+                                <div
+                                    class="invisible absolute left-0 top-full z-50 translate-y-2 pt-6 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                                >
+                                    <ul
+                                        class="bg-colorWhite shadow-card border-grayBorder flex w-56 flex-col border py-2"
+                                    >
+                                        <li>
+                                            <a
+                                                href="./practice-details/divorce.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Divorce</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./practice-details/personal-injury.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Personal Injury
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./practice-details/employment.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Employment
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./practice-details/immigration.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Immigration
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./practice-details/family.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Family
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./practice-details/property.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                            >
+                                                Property
+                                                <i
+                                                    class="fa-solid fa-chevron-right text-small"
+                                                ></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="./attorneys.html"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                >
+                                    Attorneys
+                                    <i
+                                        class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"
+                                    ></i>
+                                </a>
+                                <!-- Submenu -->
+                                <div
+                                    class="invisible absolute left-0 top-full z-50 translate-y-2 pt-6 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                                >
+                                    <ul
+                                        class="bg-colorWhite shadow-card border-grayBorder flex w-56 flex-col border py-2"
+                                    >
+                                        <li>
+                                            <a
+                                                href="./attorneys-profile/david-warner.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >David Warner</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./attorneys-profile/aaron-finch.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Aaron Finch</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./attorneys-profile/jamie-watts.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Jamie Watts</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./attorneys-profile/ellyse-perry.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Ellyse Perry</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./attorneys-profile/meg-lanning.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Meg Lanning</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./attorneys-profile/peter-siddle.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Peter Siddle</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="group relative">
+                                <a
+                                    href="#"
+                                    class="group-hover:text-orangePrimary nav-hover text-primary flex items-center gap-1 transition-colors md:text-xs lg:text-base"
+                                >
+                                    Page
+                                    <i
+                                        class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"
+                                    ></i>
+                                </a>
+                                <!-- Submenu -->
+                                <div
+                                    class="invisible absolute left-0 top-full z-50 translate-y-2 pt-6 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                                >
+                                    <ul
+                                        class="bg-colorWhite shadow-card border-grayBorder flex w-56 flex-col border py-2"
+                                    >
+                                        <li>
+                                            <a
+                                                href="./blog.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Blog</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./contact.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Contact</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./index.html#faq"
+                                                class="font-secondary hover:text-orangePrimary flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >FAQ</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./404.html"
+                                                class="font-secondary hover:text-orangePrimary text-grayDark flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >404</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="./coming-soon.html"
+                                                class="font-secondary hover:text-orangePrimary flex items-center justify-between px-5 py-2.5 text-base transition-colors"
+                                                >Coming Soon</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Contact -->
+                    <div
+                        class="flex shrink-0 items-center whitespace-nowrap text-base font-medium"
+                    >
+                        <span class="inline-block">Call :</span>
+                        <a
+                            href="tel:000123456789"
+                            class="ml-1 inline-block text-base font-bold duration-300 hover:-translate-y-1 md:text-xs lg:text-base"
+                            >(000) 123 456 789</a
+                        >
+                    </div>
+                </header>
+
+                <!-- Hero Section -->
+                <section
+                    class="mt-12 flex flex-col md:flex-row md:items-center md:justify-between md:px-10 lg:mt-36 lg:px-32"
+                >
+                    <div
+                        class="text-primary w-full shrink-0 md:w-1/2 lg:mr-32 lg:w-[570px]"
+                    >
+                        <p class="text-small lg:text-large md:text-base">
+                            #1 Law Firm in New York
+                        </p>
+
+                        <h1 class="text-4xl font-bold lg:mt-3 lg:text-6xl">
+                            Where People Meets Personalized Support.
+                        </h1>
+
+                        <p
+                            class="text-small lg:text-large font-secondary lg:max-w-470 mt-4 max-w-[280px] leading-relaxed md:mt-6 md:max-w-[90%] md:text-sm lg:leading-7"
+                        >
+                            Where every injury is personal. We are a different
+                            kind of law firm. Let our small, passionate group of
+                            trial lawyers fight for your rights!
+                        </p>
+
+                        <a
+                            href="#"
+                            class="bg-orangePrimary text-colorWhite font-secondary btn-hover mt-6 inline-block px-7 py-3 text-sm font-semibold md:px-6 md:py-3 md:text-base lg:mt-8 lg:px-8 lg:py-4"
+                            >Get a Consultations</a
+                        >
+                    </div>
+
+                    <div
+                        class="group relative mx-auto mt-16 h-60 w-60 shrink-0 bg-[#017848] md:mx-0 md:mt-0 md:h-[320px] md:w-80 lg:size-[470px]"
+                    >
+                        <div
+                            class="bg-yellow z-1 absolute bottom-0 left-0 h-[90%] w-[170px] md:h-[280px] md:w-32 lg:h-[420px] lg:w-40"
+                        ></div>
+
+                        <img
+                            src="./assets/images/Hero-banner.png"
+                            alt="Justice Law Firm"
+                            class="absolute left-1/2 z-10 h-full w-[70%] -translate-x-1/2 object-cover lg:w-[70%]"
+                        />
+
+                        <div
+                            class="absolute -left-12 -top-12 z-20 md:-left-12 md:-top-12 lg:-left-24 lg:-top-24"
+                        >
+                            <img
+                                src="./assets/images/Play.png"
+                                alt="Play Video"
+                                class="group-hover:animate-spin-slow w-[50%] object-cover md:w-[60%] lg:w-[100%]"
+                            />
+                        </div>
+
+                        <div
+                            class="z-1 absolute -right-12 top-[25%] md:-right-28 lg:-right-24"
+                        >
+                            <img
+                                src="./assets/images/Mask-orange.png"
+                                alt="Decoration"
+                                class="h-auto w-[50%] object-cover md:w-[60%] lg:w-[100%]"
+                            />
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- About -->
+            <div class="bg-primary">
+                <!-- About Section -->
+                <section
+                    class="grid grid-cols-1 items-center gap-32 px-6 py-16 md:grid-cols-2 lg:px-32 lg:py-24"
+                >
+                    <!-- About banner -->
+                    <div
+                        class="relative hidden w-full shrink-0 self-center md:block"
+                    >
+                        <div
+                            class="bg-yellow absolute md:h-32 md:w-4 lg:h-56 lg:w-4"
+                        ></div>
+                        <img
+                            src="./assets/images/About-banner.png"
+                            alt="About banner"
+                            class="w-full object-cover"
+                        />
+
+                        <div
+                            class="absolute md:-right-20 md:bottom-[20%] lg:-right-14 lg:bottom-[20%]"
+                        >
+                            <img
+                                src="./assets/images/Mask-yellow.png"
+                                alt="Decoration"
+                                class="object-cover md:size-[70%] lg:h-full lg:w-full"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- About Content -->
+                    <div class="w-full self-center">
+                        <a
+                            href="./about.html"
+                            class="text-orangePrimary text-base md:text-base"
+                            >#About Us</a
+                        >
+                        <h2
+                            class="text-colorWhite lg:text-heading-medium mt-2 text-3xl font-bold md:text-3xl lg:leading-tight"
+                        >
+                            Get the Guidance, Support, and Counsel
+                        </h2>
+                        <p
+                            class="lg:text-large text-grayLight font-secondary lg:max-w-470 mt-4 text-sm md:text-base"
+                        >
+                            Every year hundreds of clients choose our firm
+                            because of our dedication to advocating for our
+                            clients before, during and after closing.
+                        </p>
+                        <div
+                            class="mt-7 flex flex-wrap gap-6 sm:flex-nowrap md:gap-10 xl:gap-14"
+                        >
+                            <div>
+                                <p
+                                    class="text-colorWhite md:text-largefont-bold text-xl"
+                                >
+                                    1782
+                                </p>
+                                <p
+                                    class="text-grayLight font-secondary mt-1 text-sm md:mt-2 md:text-base"
+                                >
+                                    Law Cases
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-colorWhite md:text-largefont-bold text-xl"
+                                >
+                                    10+
+                                </p>
+                                <p
+                                    class="text-grayLight font-secondary mt-1 text-sm md:mt-2 md:text-base"
+                                >
+                                    Lawyer
+                                </p>
+                            </div>
+                            <div>
+                                <p
+                                    class="text-colorWhite md:text-largefont-bold text-xl"
+                                >
+                                    98%
+                                </p>
+                                <p
+                                    class="text-grayLight font-secondary mt-1 text-sm md:mt-2 md:text-base"
+                                >
+                                    Happy Clients
+                                </p>
+                            </div>
+                        </div>
+                        <a
+                            href="./about.html"
+                            class="bg-orangePrimary text-colorWhite font-secondary btn-hover mt-8 inline-block px-7 py-3 text-sm font-semibold md:mt-9 md:px-9 md:py-4 md:text-base"
+                            >Learn More</a
+                        >
+                    </div>
+                </section>
+            </div>
+
+            <div class="bg-colorWhite px-4 pt-12">
+                <div class="text-center">
+                    <p class="md:text-large text-grayDark text-sm">#Services</p>
+                    <h2
+                        class="text-heading-small md:text-heading-medium mt-1 font-bold"
+                    >
+                        Our Practice Areas
+                    </h2>
+                    <p
+                        class="md:text-large md:max-w-470 text-grayDark font-secondary mx-auto mt-2.5 text-sm leading-5 md:leading-7"
+                    >
+                        Our Law Office provides a professional experience for
+                        all our clients, helping them navigate their legal
+                        rights.
+                    </p>
+                </div>
+
+                <!-- Practice Item -->
+                <div
+                    class="mt-10 grid grid-cols-1 gap-8 pb-12 md:grid-cols-2 lg:grid-cols-3 lg:px-32"
+                >
+                    <!-- Item 1 -->
+                    <div class="relative">
+                        <img
+                            src="./assets/images/Personal.png"
+                            alt="Personal Injury Law"
+                            class="h-full w-full object-cover"
+                        />
+                        <a
+                            href="./practice-details/personal-injury.html"
+                            class="text-large bg-colorWhite font-secondary btn-hover absolute bottom-6 left-5 right-5 inline-block py-2 text-center font-semibold lg:text-xl"
+                            >Personal Injury Law</a
+                        >
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="relative">
+                        <img
+                            src="./assets/images/Employment.png"
+                            alt="Employment Law"
+                            class="h-full w-full object-cover"
+                        />
+                        <a
+                            href="./practice-details/employment.html"
+                            class="text-large bg-colorWhite font-secondary btn-hover absolute bottom-6 left-5 right-5 inline-block py-2 text-center font-semibold lg:text-xl"
+                            >Employment Law</a
+                        >
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative">
+                        <img
+                            src="./assets/images/Immigration.png"
+                            alt="Immigration Law"
+                            class="h-full w-full object-cover"
+                        />
+                        <a
+                            href="./practice-details/immigration.html"
+                            class="text-large bg-colorWhite font-secondary btn-hover absolute bottom-6 left-5 right-5 inline-block py-2 text-center font-semibold lg:text-xl"
+                            >Immigration Law</a
+                        >
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="relative">
+                        <img
+                            src="./assets/images/Family.png"
+                            alt="Family Law"
+                            class="h-full w-full object-cover"
+                        />
+                        <a
+                            href="./practice-details/family.html"
+                            class="text-large bg-colorWhite font-secondary btn-hover absolute bottom-6 left-5 right-5 inline-block py-2 text-center font-semibold lg:text-xl"
+                            >Family Law</a
+                        >
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="relative">
+                        <img
+                            src="./assets/images/Divorce.png"
+                            alt="Divorce Law"
+                            class="h-full w-full object-cover"
+                        />
+                        <a
+                            href="./practice-details/divorce.html"
+                            class="text-large bg-colorWhite font-secondary btn-hover absolute bottom-6 left-5 right-5 inline-block py-2 text-center font-semibold lg:text-xl"
+                            >Divorce Law</a
+                        >
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="relative">
+                        <img
+                            src="./assets/images/Property.png"
+                            alt="Property Law"
+                            class="h-full w-full object-cover"
+                        />
+                        <a
+                            href="./practice-details/property.html"
+                            class="text-large bg-colorWhite font-secondary btn-hover absolute bottom-6 left-5 right-5 inline-block py-2 text-center font-semibold lg:text-xl"
+                            >Property Law</a
+                        >
+                    </div>
+                </div>
+
+                <a
+                    href="./practice.html"
+                    class="text-colorWhite font-secondary bg-orangePrimary btn-hover mx-auto mt-6 block w-fit px-9 py-4 text-center text-lg font-semibold"
+                    >View All</a
+                >
+            </div>
+
+            <!-- Features -->
+            <div class="bg-colorWhite">
+                <!-- Features-1 section -->
+                <section
+                    class="mt-16 flex flex-col-reverse items-center gap-10 px-6 md:mt-24 md:flex-row md:px-10 lg:mt-36 lg:gap-0 lg:px-32"
+                >
+                    <!-- Features banner -->
+                    <div
+                        class="relative mt-4 flex w-full shrink-0 justify-end md:mt-0 md:w-1/2"
+                    >
+                        <div
+                            class="absolute right-0 top-0 z-20 h-32 w-3 bg-[#FD6038] md:-right-4 md:h-40 md:w-4 lg:right-0 lg:h-56 lg:w-5"
+                        ></div>
+
+                        <img
+                            src="./assets/images/Features-1.png"
+                            alt="Features banner"
+                            class="relative z-10 h-auto w-[90%] object-cover md:w-full lg:w-[570px]"
+                        />
+                        <div
+                            class="absolute left-6 top-[35%] z-20 -translate-x-1/4 translate-y-1/2 md:-translate-x-6 lg:-translate-x-1/2"
+                        >
+                            <img
+                                src="./assets/images/Mask-orange-1.png"
+                                alt="Decoration"
+                                class="h-auto w-[80px] md:w-[100px] lg:w-[120px]"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Features Content -->
+                    <div
+                        class="w-full max-w-[470px] md:ml-10 md:w-1/2 lg:ml-20 xl:ml-32"
+                    >
+                        <p
+                            class="text-grayDark text-sm md:text-base lg:text-lg"
+                        >
+                            #Features
+                        </p>
+                        <h2
+                            class="lg:text-heading mt-2.5 text-3xl font-bold leading-tight md:text-3xl"
+                        >
+                            A Heritage of Legal Talent in the US
+                        </h2>
+                        <p
+                            class="text-grayDark font-secondary mt-4 text-sm md:mt-5 md:text-base lg:text-lg"
+                        >
+                            When you are seeking the services of a nationally
+                            recognized law firm, you have every right to expect
+                            an extra measure of expertise.
+                        </p>
+                        <ul
+                            class="font-secondary mt-6 flex list-disc flex-col gap-3 pl-5 text-sm font-medium md:mt-7 md:gap-4 md:pl-6 md:text-base lg:text-lg"
+                        >
+                            <li>Fast and Responsive</li>
+                            <li>Top Notch Communication</li>
+                            <li>Emotional Intelligence</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Features-2 section -->
+                <section
+                    class="mt-20 flex flex-col items-center gap-10 px-6 md:mt-24 md:flex-row md:justify-between md:px-10 lg:mt-36 lg:gap-0 lg:px-32"
+                >
+                    <!-- Features Content -->
+                    <div class="w-full max-w-[470px] md:w-1/2">
+                        <p
+                            class="text-grayDark text-sm md:text-base lg:text-lg"
+                        >
+                            #Features
+                        </p>
+                        <h2
+                            class="lg:text-heading mt-2.5 text-3xl font-bold leading-tight md:text-3xl"
+                        >
+                            Exceptional Scope and Diverse Practices
+                        </h2>
+                        <p
+                            class="text-grayDark font-secondary mt-4 text-sm md:mt-5 md:text-base lg:text-lg"
+                        >
+                            Our attorneys provide clients with extensive
+                            knowledge and experience in each specialized area of
+                            practice we offer. We are providing the best.
+                        </p>
+                        <a
+                            href="./practice.html"
+                            class="text-colorWhite font-secondary bg-orangePrimary btn-hover mt-6 inline-block px-7 py-3 text-center text-sm font-semibold md:mt-8 md:px-8 md:py-3 md:text-base lg:px-9 lg:py-4 lg:text-lg"
+                            >Our Services</a
+                        >
+                    </div>
+
+                    <!-- Features banner -->
+                    <div
+                        class="relative mt-4 flex w-full shrink-0 justify-end md:mt-0 md:w-1/2"
+                    >
+                        <div
+                            class="absolute bottom-0 right-0 z-20 h-32 w-3 bg-[#017848] md:-right-4 md:h-40 md:w-4 lg:right-0 lg:h-56 lg:w-5"
+                        ></div>
+
+                        <img
+                            src="./assets/images/Features-2.png"
+                            alt="Features banner"
+                            class="relative z-10 h-auto w-[90%] object-cover md:w-full lg:w-[570px]"
+                        />
+                        <div
+                            class="absolute left-6 top-[35%] z-20 -translate-x-1/4 translate-y-1/2 md:left-0 md:top-[35%] md:-translate-x-6 lg:-translate-x-1/2"
+                        >
+                            <img
+                                src="./assets/images/Mask-green.png"
+                                alt="Decoration"
+                                class="h-auto w-[80px] md:w-[100px] lg:w-[120px]"
+                            />
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Team -->
+            <div class="bg-primary pb-24">
+                <!-- Team section -->
+                <section
+                    class="max-w-1170 mx-auto mt-16 px-5 md:mt-24 md:px-14 lg:mt-36 xl:px-0"
+                >
+                    <!-- Team content  -->
+                    <div
+                        class="flex flex-col items-center justify-center pt-16 text-center md:pt-24"
+                    >
+                        <p
+                            class="text-medium lg:text-large text-orangePrimary md:text-base"
+                        >
+                            #Team
+                        </p>
+                        <h2
+                            class="text-heading-small lg:text-heading-medium text-colorWhite mt-2 font-bold md:text-4xl"
+                        >
+                            Meet With Lawyers
+                        </h2>
+                        <p
+                            class="text-grayLight text-medium lg:text-large font-secondary mt-4 max-w-[320px] text-center font-normal md:mt-5 md:max-w-[478px] md:text-base"
+                        >
+                            Our team of experienced team more than $150 Million
+                            in Settlements and Judgments for Our Clients
+                        </p>
+                    </div>
+                    <!-- Team Item -->
+                    <div
+                        class="mt-10 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 lg:grid-cols-3"
+                    >
+                        <!-- Item 1 -->
+                        <div class="group">
+                            <div class="relative">
+                                <img
+                                    src="./assets/images/David-Warner.png"
+                                    alt="David Warner"
+                                    class="h-full w-full object-cover"
+                                />
+                                <a
+                                    href="./attorneys-profile/david-warner.html"
+                                    class="text-colorWhite bg-orangePrimary font-secondary btn-team-hover absolute bottom-6 left-1/2 inline-block -translate-x-1/2 whitespace-nowrap px-9 py-4 text-center font-semibold opacity-0"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div
+                                class="font-secondary mt-4 grid items-center justify-center text-center"
+                            >
+                                <h3 class="text-colorWhite text-xl">
+                                    David Warner
+                                </h3>
+                                <p class="text-grayLight text-base">
+                                    Attorney at Law
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="group">
+                            <div class="relative">
+                                <img
+                                    src="./assets/images/Aaron-Finch.png"
+                                    alt="Aaron Finch"
+                                    class="h-full w-full object-cover"
+                                />
+                                <a
+                                    href="./attorneys-profile/aaron-finch.html"
+                                    class="text-colorWhite bg-orangePrimary font-secondary btn-team-hover absolute bottom-6 left-1/2 inline-block -translate-x-1/2 whitespace-nowrap px-9 py-4 text-center font-semibold opacity-0"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div
+                                class="font-secondary mt-4 grid items-center justify-center text-center"
+                            >
+                                <h3 class="text-colorWhite text-xl">
+                                    Jamie Watts
+                                </h3>
+                                <p class="text-grayLight text-base">
+                                    Founding President
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="group">
+                            <div class="relative">
+                                <img
+                                    src="./assets/images/Jamie-Watts.png"
+                                    alt="Jamie Watts"
+                                    class="h-full w-full object-cover"
+                                />
+                                <a
+                                    href="./attorneys-profile/jamie-watts.html"
+                                    class="text-colorWhite bg-orangePrimary font-secondary btn-team-hover absolute bottom-6 left-1/2 inline-block -translate-x-1/2 whitespace-nowrap px-9 py-4 text-center font-semibold opacity-0"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div
+                                class="font-secondary mt-4 grid items-center justify-center text-center"
+                            >
+                                <h3 class="text-colorWhite text-xl">
+                                    Jamie Watts
+                                </h3>
+                                <p class="text-grayLight text-base">Partner</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="group">
+                            <div class="relative">
+                                <img
+                                    src="./assets/images/Ellyse-Perry.png"
+                                    alt="Ellyse Perry"
+                                    class="h-full w-full object-cover"
+                                />
+                                <a
+                                    href="./attorneys-profile/ellyse-perry.html"
+                                    class="text-colorWhite bg-orangePrimary font-secondary btn-team-hover absolute bottom-6 left-1/2 inline-block -translate-x-1/2 whitespace-nowrap px-9 py-4 text-center font-semibold opacity-0"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div
+                                class="font-secondary mt-4 grid items-center justify-center text-center"
+                            >
+                                <h3 class="text-colorWhite text-xl">
+                                    Ellyse Perry
+                                </h3>
+                                <p class="text-grayLight text-base">
+                                    Associate Attorney
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="group">
+                            <div class="relative">
+                                <img
+                                    src="./assets/images/Meg-Lanning.png"
+                                    alt="Meg Lanning"
+                                    class="h-full w-full object-cover"
+                                />
+                                <a
+                                    href="./attorneys-profile/meg-lanning.html"
+                                    class="text-colorWhite bg-orangePrimary font-secondary btn-team-hover absolute bottom-6 left-1/2 inline-block -translate-x-1/2 whitespace-nowrap px-9 py-4 text-center font-semibold opacity-0"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div
+                                class="font-secondary mt-4 grid items-center justify-center text-center"
+                            >
+                                <h3 class="text-colorWhite text-xl">
+                                    Meg Lanning
+                                </h3>
+                                <p class="text-grayLight text-base">
+                                    Senior Partner
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="group">
+                            <div class="relative">
+                                <img
+                                    src="./assets/images/Peter-Siddle.png"
+                                    alt="Peter Siddle"
+                                    class="h-full w-full object-cover"
+                                />
+                                <a
+                                    href="./attorneys-profile/peter-siddle.html"
+                                    class="text-colorWhite bg-orangePrimary font-secondary btn-team-hover absolute bottom-6 left-1/2 inline-block -translate-x-1/2 whitespace-nowrap px-9 py-4 text-center font-semibold opacity-0"
+                                    >View Profile</a
+                                >
+                            </div>
+                            <div
+                                class="font-secondary mt-4 grid items-center justify-center text-center"
+                            >
+                                <h3 class="text-colorWhite text-xl">
+                                    Peter Siddle
+                                </h3>
+                                <p class="text-grayLight text-base">
+                                    Of Counsel
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View All -->
+                    <a
+                        href="./attorneys.html"
+                        class="text-colorWhite font-secondary bg-orangePrimary btn-hover mx-auto mt-14 block w-fit px-9 py-4 text-center text-lg font-semibold"
+                        >All Attorney</a
+                    >
+                </section>
+            </div>
+
+            <!-- Awards -->
+            <div class="bg-beige">
+                <header class="px-5 pt-16 text-center md:pt-24">
+                    <p
+                        class="text-medium lg:text-large text-primary md:text-base"
+                    >
+                        #Awards
+                    </p>
+                    <h2
+                        class="text-heading-small lg:text-heading-medium text-primary mt-2 font-bold md:text-4xl"
+                    >
+                        Our Honors & Awards
+                    </h2>
+                </header>
+
+                <section
+                    class="max-w-1170 mx-auto mt-10 flex flex-col flex-wrap items-center justify-center gap-8 px-5 pb-16 md:mt-16 md:flex-row md:px-14 md:pb-24 lg:px-32 xl:px-0"
+                >
+                    <div
+                        class="bg-colorWhite mx-0 grid size-64 place-items-center"
+                    >
+                        <img
+                            src="./assets/images/award-1.png"
+                            alt="Social Justice Award"
+                        />
+                    </div>
+                    <div
+                        class="bg-colorWhite mx-0 grid size-64 place-items-center"
+                    >
+                        <img
+                            src="./assets/images/award-2.png"
+                            alt="Juvenile Justice Without Borders International Award"
+                        />
+                    </div>
+                    <div
+                        class="bg-colorWhite mx-0 grid size-64 place-items-center"
+                    >
+                        <img
+                            src="./assets/images/award-3.png"
+                            alt="Department of Justice Seal"
+                        />
+                    </div>
+                    <div
+                        class="bg-colorWhite mx-0 grid size-64 place-items-center"
+                    >
+                        <img
+                            src="./assets/images/award-4.png"
+                            alt="Center for Public Justice"
+                        />
+                    </div>
+                </section>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="bg-colorWhite py-16 lg:py-36">
+                <section class="mx-auto max-w-[1170px] px-6 md:px-16 lg:px-32">
+                    <!-- Header -->
+                    <header
+                        class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+                    >
+                        <div>
+                            <p class="text-medium text-grayDark lg:text-lg">
+                                #Testimonial
+                            </p>
+                            <h2
+                                class="text-heading-medium lg:text-heading mt-2 font-bold"
+                            >
+                                What Our Clients Say
+                                <br class="hidden md:block" />
+                                About Us
+                            </h2>
+                        </div>
+
+                        <div class="hidden gap-4 md:flex">
+                            <button
+                                class="bg-primary text-colorWhite btn-hover flex h-12 w-12 items-center justify-center"
+                            >
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button
+                                class="bg-primary text-colorWhite btn-hover flex h-12 w-12 items-center justify-center"
+                            >
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </header>
+
+                    <!-- Cards -->
+                    <div
+                        class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-8"
+                    >
+                        <!-- Card 1 -->
+                        <div
+                            class="bg-colorWhite border-grayBorder shadow-card-light hover:shadow-card-heavy border p-6 transition-shadow lg:p-10"
+                        >
+                            <img
+                                src="./assets/images/Tim-Southee.png"
+                                alt="Tim Southee"
+                                class="size-16 rounded-full object-cover object-top lg:size-20"
+                            />
+                            <p
+                                class="text-grayDark font-secondary mt-6 text-base lg:mt-8"
+                            >
+                                "I am very satisfied with this Law Office. Very
+                                professional, quick responses to calls, humble
+                                and understanding. Marty has done a lot of work
+                                for me and helped my friends and myself work
+                                through some sticky issues. His staff is
+                                professional and hard working! I recommend
+                                anyone who needs a lawyer to Marty Meason and
+                                his team."
+                            </p>
+                            <div
+                                class="text-yellow mt-4 text-4xl lg:mt-6 lg:text-5xl"
+                            >
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <h3
+                                class="text-large text-primary mt-2 font-bold lg:text-xl"
+                            >
+                                Tim Southee
+                            </h3>
+                            <p
+                                class="text-medium text-grayDark font-secondary mt-1 lg:text-sm"
+                            >
+                                UI/UX Designer
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="bg-colorWhite border-grayBorder shadow-card-light hover:shadow-card-heavy border p-6 transition-shadow lg:p-10"
+                        >
+                            <img
+                                src="./assets/images/Trent-Boult.png"
+                                alt="Trent Boult"
+                                class="size-16 rounded-full object-cover object-top lg:size-20"
+                            />
+                            <p
+                                class="text-grayDark font-secondary mt-6 text-base lg:mt-8"
+                            >
+                                "I am very satisfied with this Law Office. Very
+                                professional, quick responses to calls, humble
+                                and understanding. Marty has done a lot of work
+                                for me and helped my friends and myself work
+                                through some sticky issues. His staff is
+                                professional and hard working! I recommend
+                                anyone who needs a lawyer to Marty Meason and
+                                his team."
+                            </p>
+                            <div
+                                class="text-yellow mt-4 text-4xl lg:mt-6 lg:text-5xl"
+                            >
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <h3
+                                class="text-large text-primary mt-2 font-bold lg:text-xl"
+                            >
+                                Trent Boult
+                            </h3>
+                            <p
+                                class="text-medium text-grayDark font-secondary mt-1 lg:text-sm"
+                            >
+                                UI/UX Designer
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="bg-colorWhite border-grayBorder shadow-card-light hover:shadow-card-heavy border p-6 transition-shadow md:hidden lg:block lg:p-10"
+                        >
+                            <img
+                                src="./assets/images/Matt-Henry.png"
+                                alt="Matt Henry"
+                                class="size-16 rounded-full object-cover object-top lg:size-20"
+                            />
+                            <p
+                                class="text-grayDark font-secondary mt-6 text-base lg:mt-8"
+                            >
+                                "I am very satisfied with this Law Office. Very
+                                professional, quick responses to calls, humble
+                                and understanding. Marty has done a lot of work
+                                for me and helped my friends and myself work
+                                through some sticky issues. His staff is
+                                professional and hard working! I recommend
+                                anyone who needs a lawyer to Marty Meason and
+                                his team."
+                            </p>
+                            <div
+                                class="text-yellow mt-4 text-4xl lg:mt-6 lg:text-5xl"
+                            >
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <h3
+                                class="text-large text-primary mt-2 font-bold lg:text-xl"
+                            >
+                                Matt Henry
+                            </h3>
+                            <p
+                                class="text-medium text-grayDark font-secondary mt-1 lg:text-sm"
+                            >
+                                UI/UX Designer
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div
+                        class="mt-10 flex justify-center gap-2 md:hidden lg:mt-16 lg:flex"
+                    >
+                        <button
+                            class="bg-orangePrimary h-2.5 w-2.5 rounded-full"
+                        ></button>
+                        <button
+                            class="bg-primary h-2.5 w-2.5 rounded-full"
+                        ></button>
+                        <button
+                            class="bg-primary h-2.5 w-2.5 rounded-full"
+                        ></button>
+                        <button
+                            class="bg-primary h-2.5 w-2.5 rounded-full"
+                        ></button>
+                    </div>
+                </section>
+            </div>
+            <!-- FAQ -->
+            <div id="faq" class="bg-colorWhite">
+                <section class="mx-auto">
+                    <div class="text-center">
+                        <p class="text-grayDark text-lg">#FAQ</p>
+                        <h2
+                            class="lg:text-heading-medium text-primary mt-2 text-lg font-bold"
+                        >
+                            Frequently Asked Questions
+                        </h2>
+
+                        <div class="mt-6 flex justify-center gap-8">
+                            <button class="text-orangePrimary font-medium">
+                                General Question
+                            </button>
+                            <button
+                                class="text-grayDark hover:text-orangePrimary font-medium transition-colors"
+                            >
+                                Other Question
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mx-auto mt-16 flex max-w-3xl flex-col">
+                        <!-- Item 1 (Active) -->
+                        <div class="bg-colorWhite shadow-card-light mb-4 p-8">
+                            <div
+                                class="flex cursor-pointer items-center justify-between"
+                            >
+                                <h3 class="text-primary text-xl font-bold">
+                                    Why should I hire an attorney?
+                                </h3>
+                                <button
+                                    class="bg-orangePrimary text-colorWhite flex h-8 w-8 shrink-0 items-center justify-center"
+                                >
+                                    <i
+                                        class="fa-solid fa-chevron-up text-sm"
+                                    ></i>
+                                </button>
+                            </div>
+                            <p class="text-grayDark font-secondary mt-6">
+                                When you are faced with a personal injury, the
+                                physical and emotional burden should not be
+                                taken for granted. Hiring an attorney not only
+                                provides trusted legal guidance but someone to
+                                stand in your corner when you need it most.
+                                Insurance companies are seeking their best
+                                interest and not your own, so it's always a good
+                                idea to seek counsel.
+                            </p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="border-grayBorder border-b p-8">
+                            <div
+                                class="group flex cursor-pointer items-center justify-between"
+                            >
+                                <h3 class="text-primary text-xl font-bold">
+                                    I am still hurting. What do I do next?
+                                </h3>
+                                <button
+                                    class="bg-primary text-colorWhite group-hover:bg-orangePrimary flex h-8 w-8 shrink-0 items-center justify-center transition-colors"
+                                >
+                                    <i
+                                        class="fa-solid fa-chevron-down text-sm"
+                                    ></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="border-grayBorder border-b p-8">
+                            <div
+                                class="group flex cursor-pointer items-center justify-between"
+                            >
+                                <h3 class="text-primary text-xl font-bold">
+                                    How will I pay for my medical bills
+                                </h3>
+                                <button
+                                    class="bg-primary text-colorWhite group-hover:bg-orangePrimary flex h-8 w-8 shrink-0 items-center justify-center transition-colors"
+                                >
+                                    <i
+                                        class="fa-solid fa-chevron-down text-sm"
+                                    ></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Blog -->
+            <div class="bg-colorWhite py-16 lg:py-36">
+                <section class="mx-auto px-6 md:px-16 lg:px-32">
+                    <!-- Header -->
+                    <div
+                        class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end md:gap-0"
+                    >
+                        <div class="w-full md:max-w-[470px]">
+                            <p class="text-grayDark text-sm md:text-lg">
+                                #Blog
+                            </p>
+                            <h2
+                                class="md:text-heading-medium text-primary mt-2 text-3xl font-bold"
+                            >
+                                Latest Story & News
+                            </h2>
+                            <p
+                                class="text-grayDark font-secondary mt-3 text-sm md:mt-5 lg:text-lg"
+                            >
+                                We're always adding new content to help better
+                                inform our clients on issues impacting their
+                                lives.
+                            </p>
+                        </div>
+                        <a
+                            href="./blog.html"
+                            class="text-colorWhite font-secondary bg-orangePrimary btn-hover hidden px-7 py-3 text-center text-base font-semibold md:inline-block md:px-9 md:py-4 md:text-lg"
+                            >Browse All</a
+                        >
+                    </div>
+
+                    <!-- Blog Cards -->
+                    <div
+                        class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-16 lg:grid-cols-3"
+                    >
+                        <!-- Card 1 -->
+                        <div class="group cursor-pointer">
+                            <img
+                                src="./assets/images/Personal.png"
+                                alt="Blog 1"
+                                class="h-[280px] w-full object-cover"
+                            />
+                            <div class="mt-6 flex items-center gap-3">
+                                <img
+                                    src="./assets/images/Mitchell-Starc.png"
+                                    alt="Mitchell Starc"
+                                    class="size-12 rounded-full object-cover object-top"
+                                />
+                                <div>
+                                    <h3
+                                        class="text-primary font-primary text-base font-bold"
+                                    >
+                                        Mitchell Starc
+                                    </h3>
+                                    <p
+                                        class="text-grayDark font-secondary mt-1 text-sm"
+                                    >
+                                        Attorney at Law
+                                    </p>
+                                </div>
+                            </div>
+                            <h3
+                                class="text-primary group-hover:text-orangePrimary mt-4 text-lg font-bold transition-colors lg:mt-5 lg:text-xl"
+                            >
+                                5 Key Rules of Law in Our Society Must Know in
+                                2022
+                            </h3>
+                            <a
+                                href="./blog.html"
+                                class="text-primary font-secondary group-hover:text-orangePrimary mt-3 inline-block font-semibold transition-colors group-hover:underline lg:mt-4"
+                                >Learn More</a
+                            >
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="group cursor-pointer">
+                            <img
+                                src="./assets/images/Employment.png"
+                                alt="Blog 2"
+                                class="h-[280px] w-full object-cover"
+                            />
+                            <div class="mt-6 flex items-center gap-3">
+                                <img
+                                    src="./assets/images/Mitchell-Starc.png"
+                                    alt="Mitchell Starc"
+                                    class="size-12 rounded-full object-cover object-top"
+                                />
+                                <div>
+                                    <h3
+                                        class="text-primary font-primary text-base font-bold"
+                                    >
+                                        Mitchell Starc
+                                    </h3>
+                                    <p
+                                        class="text-grayDark font-secondary mt-1 text-sm"
+                                    >
+                                        Attorney at Law
+                                    </p>
+                                </div>
+                            </div>
+                            <h3
+                                class="text-primary group-hover:text-orangePrimary mt-4 text-lg font-bold transition-colors lg:mt-5 lg:text-xl"
+                            >
+                                5 Key Rules of Law in Our Society Must Know in
+                                2022
+                            </h3>
+                            <a
+                                href="./blog.html"
+                                class="text-primary font-secondary group-hover:text-orangePrimary mt-3 inline-block font-semibold transition-colors group-hover:underline lg:mt-4"
+                                >Learn More</a
+                            >
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="group cursor-pointer">
+                            <img
+                                src="./assets/images/Property.png"
+                                alt="Blog 3"
+                                class="h-[280px] w-full object-cover"
+                            />
+                            <div class="mt-6 flex items-center gap-3">
+                                <img
+                                    src="./assets/images/Mitchell-Starc.png"
+                                    alt="Mitchell Starc"
+                                    class="size-12 rounded-full object-cover object-top"
+                                />
+                                <div>
+                                    <h3
+                                        class="text-primary font-primary text-base font-bold"
+                                    >
+                                        Mitchell Starc
+                                    </h3>
+                                    <p
+                                        class="text-grayDark font-secondary mt-1 text-sm"
+                                    >
+                                        Attorney at Law
+                                    </p>
+                                </div>
+                            </div>
+                            <h3
+                                class="text-primary group-hover:text-orangePrimary mt-4 text-lg font-bold transition-colors lg:mt-5 lg:text-xl"
+                            >
+                                5 Key Rules of Law in Our Society Must Know in
+                                2022
+                            </h3>
+                            <a
+                                href="./blog.html"
+                                class="text-primary font-secondary group-hover:text-orangePrimary mt-3 inline-block font-semibold transition-colors group-hover:underline lg:mt-4"
+                                >Learn More</a
+                            >
+                        </div>
+                        <div class="flex justify-center md:hidden">
+                            <a
+                                href="./blog.html"
+                                class="text-colorWhite font-secondary bg-orangePrimary btn-hover inline-block px-7 py-3 text-center text-base font-semibold"
+                                >Browse All</a
+                            >
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- CTA -->
+            <div
+                class="bg-green flex items-center justify-center px-5 py-16 md:py-24"
+            >
+                <section
+                    class="text-colorWhite flex flex-col items-center text-center"
+                >
+                    <p class="text-medium md:text-large">#CTA</p>
+                    <h2
+                        class="text-heading-small lg:text-heading-medium mt-2 font-bold md:text-4xl"
+                    >
+                        Dealing With a Issue?
+                    </h2>
+                    <p
+                        class="text-small md:text-large font-secondary md:max-w-470 mt-4 max-w-[276px] md:mt-5"
+                    >
+                        Where every injury is personal. We are a different kind
+                        of law firm. Let our small, passionate group of trial
+                        lawyers fight for your rights!
+                    </p>
+                    <a
+                        href="./contact.html"
+                        class="bg-orangePrimary font-secondary btn-hover mt-8 inline-block px-7 py-3 text-sm font-semibold md:mt-9 md:px-9 md:py-4 md:text-base"
+                        >Get a Consultations</a
+                    >
+                </section>
+            </div>
+            <!-- Footer -->
+            <footer class="bg-primary pb-8 pt-7 md:pb-12 md:pt-24">
+                <div class="max-w-1170 mx-auto px-5 md:px-14 xl:px-0">
+                    <!-- Top section -->
+                    <div
+                        class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-10 xl:gap-8"
+                    >
+                        <!-- Column 1 -->
+                        <div class="lg:col-span-3">
+                            <h2
+                                class="text-colorWhite font-primary mb-6 text-xl font-bold"
+                            >
+                                Justice
+                            </h2>
+                            <ul class="flex flex-col gap-4">
+                                <li>
+                                    <a
+                                        href="./coming-soon.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Privacy Policy</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./coming-soon.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Terms & Conditions</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./coming-soon.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Cookie Preferences</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column 2 -->
+                        <div class="mt-2 md:mt-0 lg:col-span-2">
+                            <h2
+                                class="text-colorWhite font-primary mb-6 text-xl font-bold"
+                            >
+                                Pages
+                            </h2>
+                            <ul class="flex flex-col gap-4">
+                                <li>
+                                    <a
+                                        href="./index.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./about.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >About</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./practice.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Practice Areas</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="./attorneys.html"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >Attorneys</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column 3 -->
+                        <div class="mt-2 md:mt-0 lg:col-span-3">
+                            <h2
+                                class="text-colorWhite font-primary mb-6 text-xl font-bold"
+                            >
+                                Justice
+                            </h2>
+                            <ul class="flex flex-col gap-4">
+                                <li
+                                    class="text-grayLight font-secondary text-sm"
+                                >
+                                    50 Harrison Street, PH Suite 445
+                                    <br />
+                                    Hoboken, NJ 07030
+                                </li>
+                                <li
+                                    class="text-grayLight font-secondary text-sm"
+                                >
+                                    <a
+                                        href="tel:(000) 123-4567"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >(000) 123-4567</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="mailto:yourlawfirm22@gmail.com"
+                                        class="text-grayLight font-secondary hover:text-orangePrimary text-sm transition-colors"
+                                        >yourlawfirm22@gmail.com</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column 4  -->
+                        <div class="relative mt-4 md:mt-0 lg:col-span-4">
+                            <div
+                                class="relative h-[191px] w-full overflow-hidden md:h-full md:min-h-[220px]"
+                            >
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14897.995869774277!2d105.79229605903353!3d21.01271202238798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4df3c6c329%3A0xd8e14fe61fd32604!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gQ8OUTkcgTkdI4buGIEdJw4FPIEThu6RDIEY4!5e0!3m2!1sen!2s!4v1787749590685!5m2!1sen!2s"
+                                    class="absolute left-0 top-0 h-full w-full border-0 contrast-75 grayscale-[0.2] hue-rotate-180 invert"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                ></iframe>
+
+                                <div
+                                    class="bg-colorWhite font-secondary text-primary pointer-events-none absolute left-4 top-4 px-4 py-2 text-sm font-medium md:left-6 md:top-6 md:px-6 md:py-3 md:text-lg"
+                                >
+                                    View Large Map
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom section -->
+                    <div
+                        class="border-dark mt-16 flex flex-col items-start justify-between gap-6 border-t pt-8 md:mt-24 md:flex-row md:items-end md:gap-0"
+                    >
+                        <div>
+                            <a href="./index.html">
+                                <img
+                                    src="./assets/images/Logo.png"
+                                    alt="Justice Law Firm"
+                                    class="h-10 object-contain brightness-0 invert"
+                                />
+                            </a>
+                            <p
+                                class="text-grayDark font-secondary mt-4 text-sm"
+                            >
+                                Copyright © 2022 UI HUT All Rights Reserved
+                            </p>
+                        </div>
+                        <div class="flex gap-2">
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-facebook-f text-sm"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-linkedin-in text-sm"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-twitter text-sm"></i>
+                            </a>
+                            <a
+                                href="#"
+                                class="bg-dark text-colorWhite hover:bg-orangePrimary flex h-10 w-10 items-center justify-center transition-colors"
+                            >
+                                <i class="fa-brands fa-instagram text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="./assets/js/mobile-menu.js"></script>
+    </body>
+</html>
