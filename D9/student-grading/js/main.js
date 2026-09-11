@@ -27,5 +27,5 @@ if (math < 0 || math > 10 || literature < 0 || literature > 10 || english < 0 ||
         studentRank = "Trung bình";
     }
 
-    console.log("Điểm trung bình: " + averageScore + " - Học lực: " + studentRank);
+    console.log("Điểm trung bình: " + averageScore.toFixed(2) + " - Học lực: " + studentRank);
 }
