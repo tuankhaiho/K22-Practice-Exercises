@@ -1,4 +1,4 @@
-let distance = 4;
+let distance = 1.5;
 
 if (typeof distance !== "number" || distance <= 0) {
     console.log("Số km không hợp lệ.");
