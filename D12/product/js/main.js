@@ -73,3 +73,5 @@ console.log(productDescriptions);
 
 const total = calculateTotal(sortedProducts);
 console.log(total);
+
+
