@@ -23,9 +23,9 @@ const timeAgo = function (dateString) {
     return `${day}/${month}/${year}`;
 };
 
-console.log(timeAgo("2026-09-22T00:08:00+07:00"));
-console.log(timeAgo("2026-09-21T23:08:00+07:00"));
-console.log(timeAgo("2026-09-21T23:40:00+07:00"));
+console.log(timeAgo("2026-09-27T22:03:00+07:00"));
+console.log(timeAgo("2026-09-27T22:00:00+07:00"));
+console.log(timeAgo("2026-09-27T20:40:00+07:00"));
 console.log(timeAgo("2026-09-18T08:00:00+07:00"));
 
 
@@ -52,7 +52,7 @@ function getCountdown(dateString) {
   };
 }
 
-const countdown = getCountdown("2026-09-23T15:30:20+07:00");
+const countdown = getCountdown("2026-10-31T15:30:20+07:00");
 console.log(countdown);
 
 
@@ -62,6 +62,9 @@ function isWeekend(dateString) {
   return dayOfWeek === 0 || dayOfWeek === 6;
 }
 
-console.log(isWeekend("2026-09-26"));
-console.log(isWeekend("2026-09-27")); 
-console.log(isWeekend("2026-09-28")); 
+// console.log(isWeekend("2026-09-26"));
+// console.log(isWeekend("2026-09-27")); 
+// console.log(isWeekend("2026-09-28")); 
+
+// const now = new Date();
+// console.log(now.getTime());
