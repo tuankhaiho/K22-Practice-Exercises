@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gallery sản phẩm</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .thumbnail.active {
+                border-color: #3b82f6;
+            }
+        </style>
+    </head>
+    <body class="flex items-center justify-center min-h-screen bg-slate-50">
+        <div class="bg-white rounded-2xl shadow-lg p-6 w-96">
+            <img
+                id="main-image"
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+                alt="Giày thể Nike đỏ"
+                class="w-full h-80 object-cover rounded-xl mb-4"
+            />
+
+            <div class="flex gap-3">
+                <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+                    alt="Giày thể Nike đỏ"
+                    class="thumbnail active w-20 h-20 object-cover rounded-lg border-4 border-transparent cursor-pointer"
+                />
+                <img
+                    src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600"
+                    alt="Giày thể Nike trắng"
+                    class="thumbnail w-20 h-20 object-cover rounded-lg border-4 border-transparent cursor-pointer"
+                />
+                <img
+                    src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600"
+                    alt="Giày thể Nike nâu"
+                    class="thumbnail w-20 h-20 object-cover rounded-lg border-4 border-transparent cursor-pointer"
+                />
+            </div>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
