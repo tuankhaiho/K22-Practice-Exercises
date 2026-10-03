@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quảng cáo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Be Vietnam Pro", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    </head>
+    <body
+        class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 min-h-screen text-gray-800 antialiased p-4 md:p-8 flex flex-col items-center justify-center font-sans"
+    >
+        <div
+            class="bg-white/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(31,38,135,0.15)] border border-white/50 rounded-[20px] p-6 md:p-12 w-full max-w-4xl relative transition-opacity duration-300"
+        >
+            <h1
+                class="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-8 text-center"
+            >
+                Chi Tiết Chiến Dịch Quảng Cáo
+            </h1>
+
+            <div
+                id="campaign-content"
+                class="bg-white/60 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-white/80 mb-10 hidden"
+            >
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div
+                        class="bg-white/80 p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col"
+                    >
+                        <span
+                            class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1"
+                            >Nguồn</span
+                        >
+                        <span
+                            id="utm-source"
+                            class="text-xl font-bold text-indigo-600"
+                            >...</span
+                        >
+                    </div>
+                    <div
+                        class="bg-white/80 p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col"
+                    >
+                        <span
+                            class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1"
+                            >Chiến Dịch</span
+                        >
+                        <span
+                            id="utm-campaign"
+                            class="text-xl font-bold text-purple-600"
+                            >...</span
+                        >
+                    </div>
+                </div>
+
+                <div
+                    class="rounded-2xl overflow-hidden shadow-lg border-4 border-white"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                        alt="Sản phẩm quảng cáo"
+                        class="w-full h-80 object-cover transform hover:scale-105 transition-transform duration-700"
+                    />
+                    <div class="bg-white p-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">
+                            Giày Thể Thao Nike Air Max
+                        </h2>
+                        <p class="text-gray-600 mb-4">
+                            Khám phá sức mạnh và sự thoải mái tuyệt đối với
+                            phiên bản giới hạn. Nhập mã
+                            <strong>SALE50</strong> để được giảm ngay 50%.
+                        </p>
+                        <button
+                            class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full hover:bg-indigo-700 transition-colors shadow-md hover:shadow-lg w-full md:w-auto"
+                        >
+                            Mua Ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="no-params-alert"
+                class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-2xl shadow-md mb-10 hidden"
+            >
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <i
+                            class="fa-solid fa-circle-exclamation text-red-500 text-2xl"
+                        ></i>
+                    </div>
+                    <div class="ml-4">
+                        <h2 class="text-lg font-medium text-red-800">
+                            Không có tham số quảng cáo
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a
+                    href="./index.html"
+                    class="group relative inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-gray-800 transition-all duration-200 bg-white border border-gray-200 rounded-full hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                >
+                    <i
+                        class="fa-solid fa-house mr-3 transition-transform group-hover:-translate-x-1"
+                    ></i>
+                    Trở Về Trang Chủ
+                </a>
+            </div>
+        </div>
+
+        <script src="./js/campaign.js"></script>
+    </body>
+</html>

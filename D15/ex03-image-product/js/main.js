@@ -8,3 +8,5 @@ thumbnails.forEach((thumb) => {
         thumb.classList.add("active");
     });
 });
+
+
