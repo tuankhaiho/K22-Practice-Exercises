@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Giỏ hàng</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ["Be Vietnam Pro", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-slate-50 text-stone-800 p-4 md:p-6 font-sans">
+        <div
+            class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 items-start"
+        >
+            <main class="lg:col-span-3">
+                <h2 class="text-xl font-bold mb-4 text-slate-900">
+                    Danh sách sản phẩm
+                </h2>
+                <div
+                    id="product-list"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+                >
+                    <p class="text-slate-500 col-span-full">
+                        Đang tải dữ liệu sản phẩm...
+                    </p>
+                </div>
+            </main>
+
+            <aside
+                class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm sticky top-6"
+            >
+                <h2 class="text-xl mb-4 font-bold text-slate-900">Giỏ hàng</h2>
+                <div
+                    id="cart-container"
+                    class="max-h-96 border-b mb-4 border-slate-200"
+                ></div>
+                <div class="flex flex-col gap-2 text-sm text-slate-700">
+                    <div class="flex justify-between">
+                        <span>Tổng số lượng:</span>
+                        <strong id="total-qty" class="text-slate-900">0</strong>
+                    </div>
+                    <div
+                        class="flex justify-between pt-2 border-t border-slate-200 text-base"
+                    >
+                        <span>Tổng tiền:</span>
+                        <strong
+                            id="total-price"
+                            class="text-emerald-600 font-bold"
+                            >$0</strong
+                        >
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
+

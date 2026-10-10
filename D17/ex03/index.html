@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Danh sách sản phẩm</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: { sans: ["Be Vietnam Pro", "sans-serif"] },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-slate-50 text-stone-800 p-4 md:p-6 font-sans min-h-screen">
+        <div class="max-w-7xl mx-auto">
+            <header class="mb-6">
+                <h1 class="text-2xl md:text-3xl font-bold text-slate-900">
+                    Danh sách sản phẩm
+                </h1>
+            </header>
+
+            <div
+                id="product-list"
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+            ></div>
+        </div>
+
+        <div
+            id="detail-modal"
+            class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4"
+        >
+            <div
+                class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
+            >
+                <button
+                    id="close-modal"
+                    class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 hover:bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-600 z-10 transition"
+                    title="Đóng (Esc)"
+                >
+                    ✕
+                </button>
+
+                <div id="modal-content"></div>
+            </div>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
+
