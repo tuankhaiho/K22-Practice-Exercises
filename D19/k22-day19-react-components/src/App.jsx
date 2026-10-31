@@ -127,7 +127,7 @@ function App() {
                 {activePage === "ex01" && (
                     <div>
                         <h1 className="text-3xl font-extrabold text-slate-800 text-center mb-8">
-                            Danh Sách Người Dùng (Bài 1)
+                            Danh Sách Người Dùng 
                         </h1>
                         <div className="flex flex-wrap justify-center gap-6">
                             {users.map((user) => (
@@ -159,7 +159,7 @@ function App() {
                 {activePage === "ex03" && (
                     <div>
                         <h1 className="text-3xl font-extrabold text-slate-800 text-center mb-8">
-                            Hệ Thống Hỏi Đáp (Bài 3)
+                            Hệ Thống Hỏi Đáp 
                         </h1>
                         <FAQList faqs={faqData} onSelectFaq={handleSelectFaq} />
                     </div>
