@@ -1,551 +1,572 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Danh Sách Bài Tập</title>
+        <title>Danh Sách Bài Tập & Dự Án - F8</title>
+        <!-- Google Fonts: Plus Jakarta Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
+        <!-- Font Awesome 6 -->
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         />
-        <link rel="stylesheet" href="./assets/css/style.css" />
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        },
+                    },
+                },
+            };
+        </script>
     </head>
-    <body>
-        <div class="container">
-            <h1 class="main-title">Danh Sách Bài Tập</h1>
+    <body class="bg-slate-950 text-slate-100 font-sans min-h-screen selection:bg-indigo-500/30 selection:text-indigo-200">
+        <!-- Background Ambient Glow -->
+        <div class="fixed inset-0 pointer-events-none overflow-hidden opacity-30">
+            <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-600 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-violet-600 rounded-full blur-3xl"></div>
+        </div>
 
-            <div class="sessions-grid">
-                <div class="session-card">
-                    <h2>
-                        Buổi 2: Syntax, Semantic, Entity, Tag types trong HTML
-                    </h2>
-                    <div class="links">
-                        <a href="./D2/index.html" class="link-card">
-                            <span class="link-title">Bài 1: Blog ES2025</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+            <!-- Header Section -->
+            <header class="text-center max-w-3xl mx-auto mb-16">
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+                    Danh Sách Bài Tập
+                
+                <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8">
+                    <a href="#module-html" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition-colors">
+                        <span class="text-sky-400 mr-1.5">●</span>HTML & CSS 
+                    </a>
+                    <a href="#module-js" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition-colors">
+                        <span class="text-amber-400 mr-1.5">●</span>JavaScript 
+                    </a>
+                    <a href="#module-react" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition-colors">
+                        <span class="text-indigo-400 mr-1.5">●</span>React.js 
+                    </a>
+                </div>
+            </header>
+
+            <!-- MODULE 1: HTML & CSS -->
+            <section id="module-html" class="mb-16 scroll-mt-8">
+                <div class="flex items-center gap-3 mb-6 pb-3 border-b border-slate-800/80">
+                    <div class="w-8 h-8 rounded-lg bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-sm font-bold">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Module 1: HTML & CSS</h2>
                     </div>
                 </div>
 
-                <div class="session-card">
-                    <h2>Buổi 3: Link, Media, Form, Table HTML, Selector CSS</h2>
-                    <div class="links">
-                        <a href="./D3/Excersise/blog.html" class="link-card">
-                            <span class="link-title">Bài 1: Blog</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                        <a
-                            href="./D3/Excersise/newsletter.html"
-                            class="link-card"
-                        >
-                            <span class="link-title">Bài 2: Bản tin F8</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                        <a href="./D3/Excersise/contact.html" class="link-card">
-                            <span class="link-title">Bài 3: Trang liên hệ</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Buổi 2 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20">Buổi 02</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Syntax, Semantic, Entity, Tag types trong HTML
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D2/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Blog ES2025</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 3 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20">Buổi 03</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Link, Media, Form, Table HTML, Selector CSS
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D3/Excersise/blog.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Blog</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D3/Excersise/newsletter.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Bản tin F8</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D3/Excersise/contact.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Trang liên hệ</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 4 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20">Buổi 04</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Selector, Inheritance, Specificity, Unit, Reset, Layout
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D4/Excersise/blog.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Bài viết nổi bật</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D4/Excersise/profile.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Trang cá nhân</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 5 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20">Buổi 05</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Flexbox, Position, Grid, Z-index, Typography
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D5/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: F8 - Học Lập Trình Để Đi Làm</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 6 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20">Buổi 06</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Background, Effect, Transform, Transition, Animation
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D6/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Trang chủ</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D6/discussions.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Trang hỏi đáp</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D6/assignments.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Trang bài tập</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 7 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-sky-500/10 text-sky-400 border border-sky-500/20">Buổi 07</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Tailwind CSS UI Architecture
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D7/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Trang chủ (Tailwind)</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 8 -->
+                    <div class="bg-gradient-to-br from-slate-900/90 to-indigo-950/40 hover:to-indigo-950/60 border border-indigo-500/30 hover:border-indigo-400/60 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Buổi 08 • Dự án Module 1</span>
+                                <span class="text-xs text-amber-400 font-semibold"><i class="fa-solid fa-trophy mr-1"></i>Project 1</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Law Firm Website
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./project-1/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 border border-indigo-500/30 text-white transition-all group">
+                                <span class="text-xs font-semibold">Trang chủ Law Firm</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-indigo-300 group-hover:text-white group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULE 2: JAVASCRIPT -->
+            <section id="module-js" class="mb-16 scroll-mt-8">
+                <div class="flex items-center gap-3 mb-6 pb-3 border-b border-slate-800/80">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center text-sm font-bold">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Module 2: JavaScript Core & Web APIs</h2>
                     </div>
                 </div>
 
-                <div class="session-card">
-                    <h2>
-                        Buổi 4: Selector, Inheritance, Specificity, Unit, Reset,
-                        Layout types CSS
-                    </h2>
-                    <div class="links">
-                        <a href="./D4/Excersise/blog.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 1: Bài viết nổi bật</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                        <a href="./D4/Excersise/profile.html" class="link-card">
-                            <span class="link-title">Bài 2: Trang cá nhân</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Buổi 9 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 09</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Biến, Kiểu dữ liệu, Toán tử, Câu lệnh rẽ nhánh
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D9/student-grading/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Tính điểm & xếp loại học sinh</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D9/day-of-week/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Chuyển số sang ngày trong tuần</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D9/taxi-fare/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Tính tiền cước Taxi</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 10 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 10</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Loops, String, Number trong JavaScript
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D10/check-prime/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Kiểm tra số nguyên tố</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D10/normalize-name/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Chuẩn hóa tên người dùng</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D10/mask-email/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Che thông tin email</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 11 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 11</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Function, Object trong JavaScript
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D11/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Xây dựng giỏ hàng</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 12 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 12</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Array, Đối tượng Math trong JavaScript
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D12/random-hex-color/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Random màu nền bằng mã HEX</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D12/product/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Bộ lọc và sắp xếp giỏ hàng</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D12/generate-otp/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Tạo mã OTP ngẫu nhiên</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 13 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 13</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Prototype, Classes, Date trong JavaScript
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D13/employee-management/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Quản lý Nhân sự</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D13/time-utils/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Bộ công cụ xử lý Thời gian</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 14 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 14</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Map, Set, JSON, Closure, Recursion
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D14/ex01-product-tags/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Lọc trùng & tìm giao điểm tag</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D14/ex02-cart-cache/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Bộ nhớ đệm giỏ hàng (Cart Cache)</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D14/ex03-total-revenue/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Tính tổng doanh thu chi nhánh</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 15 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 15</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Thao tác DOM trong JavaScript
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D15/ex01-dark-mode/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Đổi theme Sáng / Tối</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D15/ex02-hiden-password/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Ẩn / Hiện mật khẩu</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D15/ex03-image-product/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Thay đổi ảnh sản phẩm</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 16 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 16</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                BOM (Browser Object Model)
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D16/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Trang chủ</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 17 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-slate-700 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">Buổi 17</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Web Storage & Bất đồng bộ
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="./D17/ex01/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 1: Ghi nhớ giỏ hàng</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D17/ex02/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 2: Ghi nhớ thông tin khách hàng</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                            <a href="./D17/ex03/index.html" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Bài 3: Danh sách sản phẩm từ server</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODULE 3: REACT.JS -->
+            <section id="module-react" class="mb-16 scroll-mt-8">
+                <div class="flex items-center gap-3 mb-6 pb-3 border-b border-slate-800/80">
+                    <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-sm font-bold">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Module 3: React.js</h2>
                     </div>
                 </div>
 
-                <div class="session-card">
-                    <h2>
-                        Buổi 5: Flexbox, Position, Grid, Z-index, Typography
-                    </h2>
-                    <div class="links">
-                        <a href="./D5/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 1: F8 - Học Lập Trình Để Đi Làm</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Buổi 19 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Buổi 19</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                React Components & Props
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="https://k22-practice-exercises-d19.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">React Components</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 20 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Buổi 20</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Props, Event Handling, useState trong React
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="https://k22-practice-exercises-d20.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Xây dựng giỏ hàng</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 21 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Buổi 21</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                React Router Single Page App
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="https://k22-practice-exercises-d21.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Website E-commerce điều hướng React Router</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 22 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Buổi 22</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                useEffect, useContext, useReducer trong React
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="https://k22-practice-exercises-d22.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Website E-commerce với useEffect, useContext, useReducer</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 23 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Buổi 23</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                useRef, useMemo, useCallback & Custom Hooks
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="https://k22-practice-exercises-d23.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Xây dựng danh sách ghi chú học tập</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Buổi 24 -->
+                    <div class="bg-slate-900/60 hover:bg-slate-900 border border-slate-800/80 hover:border-indigo-500/40 rounded-2xl p-5 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
+                        <div>
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">Buổi 24</span>
+                            </div>
+                            <h3 class="text-sm sm:text-base font-bold text-white mb-4 leading-snug">
+                                Zustand, TanStack Query trong React
+                            </h3>
+                        </div>
+                        <div class="space-y-2 pt-3 border-t border-slate-800/60">
+                            <a href="https://k22-practice-exercises-d24.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/40 hover:bg-indigo-600/15 border border-slate-800 hover:border-indigo-500/40 text-slate-300 hover:text-white transition-all group">
+                                <span class="text-xs font-medium">Xây dựng trang khám phá sản phẩm</span>
+                                <i class="fa-solid fa-arrow-right text-xs text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-1 transition-all"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="session-card">
-                    <h2>
-                        Buổi 6: CSS Background, Effect, Transform, Transition,
-                        Animation
-                    </h2>
-                    <div class="links">
-                        <a href="./D6/index.html" class="link-card">
-                            <span class="link-title">Bài 1: Trang chủ</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                        <a href="./D6/discussions.html" class="link-card">
-                            <span class="link-title">Bài 2: Trang hỏi đáp</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                        <a href="./D6/assignments.html" class="link-card">
-                            <span class="link-title">Bài 3: Trang bài tập</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 7: Tailwind CSS</h2>
-                    <div class="links">
-                        <a href="./D7/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 1: Trang chủ (Tailwind)</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 8: Dự án cuối module 1: Law Firm Website</h2>
-                    <div class="links">
-                        <a href="./project-1/index.html" class="link-card">
-                            <span class="link-title">Trang chủ</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>
-                        Buổi 9: Biến, Kiểu dữ liệu, Toán tử, Câu lệnh rẽ nhánh
-                        trong JavaScript
-                    </h2>
-                    <div class="links">
-                        <a
-                            href="./D9/student-grading/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 1: Hệ thống tính điểm và xếp loại học
-                                sinh</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-
-                        <a href="./D9/day-of-week/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 2: Chuyển đổi số sang ngày trong tuần</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-
-                        <a href="./D9/taxi-fare/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 3: Tính tiền cước Taxi</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>
-                        Buổi 10: Lộ trình Bài viết Bản tin Hỏi đáp Bài tập 1
-                        Buổi 10: Loops, String, Number trong JavaScript
-                    </h2>
-                    <div class="links">
-                        <a
-                            href="./D10/check-prime/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 1: Kiểm tra số nguyên tố</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-
-                        <a
-                            href="./D10/normalize-name/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 2: Chuẩn hóa tên người dùng</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-
-                        <a href="./D10/mask-email/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 3: Che thông tin email</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 11: Function, Object trong JavaScript</h2>
-                    <div class="links">
-                        <a href="./D11/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 1: Xây dựng giỏ hàng</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 12: Array, đối tượng Math trong JavaScript</h2>
-                    <div class="links">
-                        <a
-                            href="./D12/random-hex-color/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 1: Random màu nền bằng mã HEX</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-
-                    <div class="links">
-                        <a href="./D12/product/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 2: Bộ lọc và sắp xếp giỏ hàng</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-
-                    <div class="links">
-                        <a
-                            href="./D12/generate-otp/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 3: Tạo mã OTP ngẫu nhiên</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 13: Prototype, Classes, Date trong JavaScript</h2>
-                    <div class="links">
-                        <a
-                            href="./D13/employee-management/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 1: Quản lý Nhân sự</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-
-                    <div class="links">
-                        <a href="./D13/time-utils/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 2: Bộ công cụ xử lý Thời gian</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>
-                        Buổi 14: Map, Set, JSON, Error, Scope, Context, Closure,
-                        Recursion trong JavaScript
-                    </h2>
-                    <div class="links">
-                        <a
-                            href="./D14/ex01-product-tags/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 1: Lọc trùng và tìm giao điểm tag sản
-                                phẩm</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-
-                    <div class="links">
-                        <a
-                            href="./D14/ex02-cart-cache/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 2: Bộ nhớ đệm giỏ hàng (Cart Cache)</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-
-                    <div class="links">
-                        <a
-                            href="./D14/ex03-total-revenue/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 3: Tính tổng doanh thu tất cả chi
-                                nhánh</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 15: DOM</h2>
-                    <div class="links">
-                        <a
-                            href="./D15/ex01-dark-mode/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 1: Đổi theme Sáng/Tối</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-
-                    <div class="links">
-                        <a
-                            href="./D15/ex02-hiden-password/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 2: Ẩn/Hiện mật khẩu</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-
-                    <div class="links">
-                        <a
-                            href="./D15/ex03-image-product/index.html"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Bài 3: Thay đổi ảnh sản phẩm</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 16: BOM</h2>
-                    <div class="links">
-                        <a href="./D16/index.html" class="link-card">
-                            <span class="link-title">Bài 1: Trang chủ</span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 17: Storage, Asynchronous</h2>
-                    <div class="links">
-                        <a href="./D17/ex01/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 1: Ghi nhớ giỏ hàng</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                    <div class="links">
-                        <a href="./D17/ex02/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 2: Ghi nhớ thông tin khách hàng</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                    <div class="links">
-                        <a href="./D17/ex03/index.html" class="link-card">
-                            <span class="link-title"
-                                >Bài 3: Danh sách sản phẩm từ server</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 19: React Components & Props</h2>
-                    <div class="links">
-                        <a
-                            href="https://k22-practice-exercises-d19.vercel.app/"
-                            class="link-card"
-                        >
-                            <span class="link-title">React Components </span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>
-                        Buổi 20: Props, Event Handling, useState trong React
-                    </h2>
-                    <div class="links">
-                        <a
-                            href="https://k22-practice-exercises-d20.vercel.app/"
-                            class="link-card"
-                        >
-                            <span class="link-title">Xây dựng giỏ hàng </span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>Buổi 21: React Router</h2>
-                    <div class="links">
-                        <a
-                            href="https://k22-practice-exercises-d21.vercel.app/"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Xây dựng website E-commerce có điều hướng bằng
-                                React Router
-                            </span>
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>
-                        Buổi 22: useEffect, useContext, useReducer trong React
-                    </h2>
-                    <div class="links">
-                        <a
-                            href="https://k22-practice-exercises-d22.vercel.app/"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Xây dựng website E-commerce có sử dụng hook
-                                useEffect, useContext, useReducer</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="session-card">
-                    <h2>
-                        Buổi 23: useRef, useImperativeHandle, useMemo, useCallback, Custom hooks trong React
-                    </h2>
-                    <div class="links">
-                        <a
-                            href="https://k22-practice-exercises-d23.vercel.app/"
-                            class="link-card"
-                        >
-                            <span class="link-title"
-                                >Xây dựng danh sách ghi chú học tập</span
-                            >
-                            <span class="icon"
-                                ><i class="fa-solid fa-arrow-right"></i
-                            ></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
     </body>
 </html>

@@ -1,8 +1,6 @@
 import { memo } from "react";
 
 function NoteItem({ note, onToggleImportant }) {
-    console.log("render NoteItem:", note.title);
-
     return (
         <li
             className={`p-4 rounded-2xl border transition-all duration-150 flex items-start justify-between gap-4 ${
